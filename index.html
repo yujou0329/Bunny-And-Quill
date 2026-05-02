@@ -7,90 +7,90 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .gold-text { color: #C5A059; } /* 匹配 LOGO 的金色 */
-        .bg-gold { background-color: #C5A059; }
+        .gold-text { color: #C5A059; }
+        .border-gold { border-color: #C5A059; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Navigation Bar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <!-- LOGO 放置處 -->
-                <img src="logo.jpg" alt="Bunny and Quill Logo" class="h-12 w-12 rounded-full">
-                <div class="text-xl font-bold tracking-tighter">BUNNY AND QUILL <span class="text-gray-400 font-light">LLC</span></div>
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- 放大後的導覽列 LOGO -->
+                <img src="logo.jpg.png" alt="Bunny and Quill Logo" class="h-20 w-20 rounded-full shadow-sm">
+                <div class="text-2xl font-bold tracking-tighter">BUNNY AND QUILL <span class="text-gray-400 font-light">LLC</span></div>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium">
+            <div class="hidden md:flex space-x-8 font-medium text-lg">
                 <a href="#services" class="hover:gold-text">Services</a>
-                <a href="#contact" class="bg-gray-900 text-white px-5 py-2 rounded hover:bg-gray-700 transition">Contact Us</a>
+                <a href="#contact" class="bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700 transition">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-white py-20 border-b">
+    <header class="bg-white py-24 border-b">
         <div class="container mx-auto px-6 text-center">
-            <!-- 大尺寸 LOGO 展示 -->
-            <img src="logo.jpg" alt="Bunny and Quill" class="mx-auto h-32 w-32 mb-8 shadow-lg rounded-full">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Professional Multi-Service Excellence</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Based in Pensacola, Florida, Bunny and Quill LLC combines creativity with professional management consulting, 3D printing, and digital solutions.
+            <!-- 放大後的首頁核心 LOGO -->
+            <img src="logo.jpg.png" alt="Bunny and Quill" class="mx-auto h-72 w-72 mb-10 shadow-2xl border-4 border-gold rounded-full">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-8">Professional Multi-Service Excellence</h1>
+            <p class="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Based in Pensacola, Florida, Bunny and Quill LLC provides expert management consulting, 3D printing, and integrated digital solutions for our local community.
             </p>
         </div>
     </header>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <section id="services" class="py-20 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             
             <!-- Stationery & Crafts Shop -->
-            <div class="p-8 bg-white rounded-lg shadow-sm border border-gray-100 flex flex-col justify-between hover:border-yellow-500 transition">
+            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 flex flex-col justify-between hover:border-gold transition-all duration-300">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 gold-text">Stationery & Crafts</h3>
-                    <p class="text-gray-600 mb-6">Discover our unique handcrafted beadable pens and premium creative stationery at our online store.</p>
+                    <h3 class="text-3xl font-bold mb-6 gold-text">Stationery & Crafts</h3>
+                    <p class="text-xl text-gray-600 mb-8">Discover our unique handcrafted beadable pens and premium creative stationery at our online boutique.</p>
                 </div>
-                <a href="https://bunny-and-quill.square.site" target="_blank" class="text-center bg-black text-white py-3 rounded hover:bg-gray-800 transition font-bold">
+                <a href="https://bunny-and-quill.square.site" target="_blank" class="text-center bg-black text-white py-4 rounded-lg hover:bg-gray-800 transition text-xl font-bold">
                     Shop Stationery <i class="fas fa-shopping-cart ml-2"></i>
                 </a>
             </div>
 
             <!-- Catering & Delivery Section -->
-            <div class="p-8 bg-white rounded-lg shadow-sm border border-gray-100 flex flex-col justify-between hover:border-yellow-500 transition">
+            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 flex flex-col justify-between hover:border-gold transition-all duration-300">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 gold-text">Catering & Delivery</h3>
-                    <p class="text-gray-600 mb-2">High-quality catering and local delivery services through <strong>Allan's Table On Wheels</strong>.</p>
-                    <div class="flex gap-4 mb-6">
-                        <a href="https://www.facebook.com/AllansTableOnWheels" target="_blank" class="text-blue-600 hover:underline"><i class="fab fa-facebook"></i> Follow us on Facebook</a>
+                    <h3 class="text-3xl font-bold mb-6 gold-text">Catering & Delivery</h3>
+                    <p class="text-xl text-gray-600 mb-4">High-quality catering and reliable local logistics through <strong>Allan's Table On Wheels</strong>.</p>
+                    <div class="flex gap-4 mb-8">
+                        <a href="https://www.facebook.com/AllansTableOnWheels" target="_blank" class="text-blue-600 hover:underline text-lg font-medium"><i class="fab fa-facebook mr-2"></i>Follow us on Facebook</a>
                     </div>
                 </div>
-                <a href="https://allanstableonwheels.square.site" target="_blank" class="text-center bg-orange-600 text-white py-3 rounded hover:bg-orange-700 transition font-bold">
+                <a href="https://allanstableonwheels.square.site" target="_blank" class="text-center bg-orange-600 text-white py-4 rounded-lg hover:bg-orange-700 transition text-xl font-bold">
                     Order Catering <i class="fas fa-utensils ml-2"></i>
                 </a>
             </div>
 
             <!-- 3D Printing -->
-            <div class="p-8 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 class="text-xl font-bold mb-3 gold-text">3D Printing & Design</h3>
-                <p class="text-gray-600">Advanced 3D printing services utilizing Bambu Lab technology for custom parts and creative designs in Pensacola.</p>
+            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 hover:border-gold transition-all duration-300">
+                <h3 class="text-2xl font-bold mb-4 gold-text">3D Printing & Design</h3>
+                <p class="text-lg text-gray-600">Advanced 3D printing utilizing state-of-the-art technology for custom parts and creative designs right here in Pensacola.</p>
             </div>
 
             <!-- Management Consulting & Digital Marketing -->
-            <div class="p-8 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 class="text-xl font-bold mb-3 gold-text">Business & Digital Solutions</h3>
-                <p class="text-gray-600">Expert management consulting, e-commerce setup, and SEO-driven internet marketing promotion.</p>
+            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 hover:border-gold transition-all duration-300">
+                <h3 class="text-2xl font-bold mb-4 gold-text">Business & Digital Solutions</h3>
+                <p class="text-lg text-gray-600">Expert management consulting, custom e-commerce setup, and SEO-driven digital marketing promotion.</p>
             </div>
 
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-white py-12">
+    <footer id="contact" class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-6 text-center">
-            <img src="logo.jpg" alt="Bunny and Quill Logo" class="mx-auto h-16 w-16 mb-4 opacity-80 grayscale hover:grayscale-0 transition rounded-full">
-            <h2 class="text-2xl font-bold mb-4">Bunny and Quill LLC</h2>
-            <p class="opacity-70">Pensacola, Florida</p>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-sm opacity-50">
+            <img src="logo.jpg.png" alt="Bunny and Quill Logo" class="mx-auto h-24 w-24 mb-6 opacity-90 rounded-full">
+            <h2 class="text-3xl font-bold mb-4">Bunny and Quill LLC</h2>
+            <p class="text-xl opacity-70">Pensacola, Florida</p>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-sm opacity-50">
                 &copy; 2026 Bunny and Quill LLC. All Rights Reserved.
             </div>
         </div>
