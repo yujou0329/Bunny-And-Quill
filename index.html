@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bunny And Quill LLC | Pensacola Multi-Service Expert</title>
+    <title>Bunny And Quill LLC | Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .gold-text { color: #C5A059; }
-        .border-gold { border-color: #C5A059; }
         .bg-gold { background-color: #C5A059; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0.75rem; }
+        .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0.75rem; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="logo.jpg" alt="Bunny and Quill Logo" class="h-16 w-16 rounded-full shadow-sm">
-                <div class="text-2xl font-bold tracking-tighter">BUNNY AND QUILL <span class="text-gray-400 font-light">LLC</span></div>
+                <img src="logo.jpg" alt="Logo" class="h-16 w-16 rounded-full shadow-sm">
+                <div class="text-2xl font-bold tracking-tighter uppercase">BUNNY AND QUILL <span class="text-gray-400 font-light">LLC</span></div>
             </div>
             <div class="hidden md:flex space-x-8 font-medium text-lg">
                 <a href="#services" class="hover:gold-text">Services</a>
@@ -31,92 +30,118 @@
         </div>
     </nav>
 
-    <!-- New Split-Screen Hero Section -->
+    <!-- Hero Section with Video & Gallery -->
     <header class="bg-white py-12 border-b">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-12">
-                
-                <!-- Left: 3D Printing Video -->
+                <!-- 3D Video Area -->
                 <div class="w-full lg:w-1/2">
-                    <h2 class="text-2xl font-bold mb-4 gold-text"><i class="fas fa-video mr-2"></i>3D Printing in Action</h2>
+                    <h2 class="text-2xl font-bold mb-4 gold-text uppercase">3D Printing Process</h2>
                     <div class="video-container shadow-2xl">
-                        <!-- 您可以將下方的 src 換成您的影片連結或上傳的影片檔名 -->
                         <video controls autoplay muted loop poster="logo.jpg">
                             <source src="3d-print-timelapse.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
-
-                <!-- Right: Portfolio/Sample Gallery -->
+                <!-- Gallery Area -->
                 <div class="w-full lg:w-1/2">
-                    <h2 class="text-2xl font-bold mb-4 gold-text"><i class="fas fa-images mr-2"></i>Our Portfolio</h2>
+                    <h2 class="text-2xl font-bold mb-4 gold-text uppercase">Work Samples</h2>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
-                            <img src="sample1.jpg" alt="Sample 1" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                            <img src="sample1.jpg" alt="Work Sample" class="w-full h-full object-cover">
                         </div>
                         <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
-                            <img src="sample2.jpg" alt="Sample 2" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                            <img src="sample2.jpg" alt="Work Sample" class="w-full h-full object-cover">
                         </div>
                         <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
-                            <img src="sample3.jpg" alt="Sample 3" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                            <img src="sample3.jpg" alt="Work Sample" class="w-full h-full object-cover">
                         </div>
                         <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
-                            <img src="sample4.jpg" alt="Sample 4" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                            <img src="sample4.jpg" alt="Work Sample" class="w-full h-full object-cover">
                         </div>
                     </div>
-                    <p class="mt-6 text-xl text-gray-600 italic">Professional Multi-Service Excellence in Pensacola, FL.</p>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- Pricing Section (Content from flyers) -->
-    <section id="pricing" class="py-20 container mx-auto px-6">
-        <h2 class="text-4xl font-extrabold text-center mb-12">Service Pricing</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            
-            <!-- 3D Printing Pricing[cite: 1] -->
-            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100">
-                <h3 class="text-3xl font-bold mb-6 gold-text">Custom 3D Printing</h3>
-                <div class="space-y-4 mb-6">
-                    <div class="flex justify-between border-b pb-2"><span>Initial Setup & Calibration</span><span class="font-bold">$10.00</span></div>
-                    <div class="flex justify-between border-b pb-2"><span>Material (PLA / PETG)</span><span class="font-bold">$0.05/g</span></div>
-                    <div class="flex justify-between border-b pb-2"><span>Machine Print Time</span><span class="font-bold">$0.75/hr</span></div>
+    <!-- Detailed Pricing (From Flyers) -->
+    <section id="pricing" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-12 uppercase tracking-widest">Service Rates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- 3D Printing Detail -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-gold">
+                    <h3 class="text-2xl font-bold mb-6 gold-text italic">3D PRINTING & DESIGN</h3>
+                    <ul class="space-y-4 mb-8 text-lg">
+                        <li class="flex justify-between border-b pb-2"><span>Initial Setup Fee</span><span class="font-bold">$10.00</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>Material (PLA/PETG)</span><span class="font-bold">$0.05/g</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>Machine Print Time</span><span class="font-bold">$0.75/hr</span></li>
+                    </ul>
+                    <p class="text-sm text-gray-500 mb-4">* Bulk discounts available for 5+ prints (10% OFF)[cite: 1]</p>
                 </div>
-                <div class="bg-gray-50 p-4 rounded-lg text-sm mb-4">
-                    <p><strong>Bulk Savings:</strong> 5+ Prints (10% OFF) | 10+ Prints (20% OFF)</p>
-                </div>
-                <p class="text-xs text-gray-500 italic">Get a Quote: Send us your .STL or .3MF file![cite: 1]</p>
-            </div>
-
-            <!-- Beadable Pen Station[cite: 2] -->
-            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100">
-                <h3 class="text-3xl font-bold mb-6 gold-text">DIY Beadable Pens</h3>
-                <div class="space-y-4 mb-6">
-                    <div class="flex justify-between border-b pb-2"><span>Standard Pen Body</span><span class="font-bold">$1.00</span></div>
-                    <div class="flex justify-between border-b pb-2"><span>Animal / Silicone Beads</span><span class="font-bold">$3.00/ea</span></div>
-                </div>
-                <div class="bg-orange-50 border border-orange-200 p-4 rounded-lg text-center">
-                    <h4 class="font-bold text-orange-800">SPECIAL DEAL[cite: 2]</h4>
-                    <div class="text-xl font-black text-orange-600">1 FOR $6.00 | 2 FOR $10.00</div>
-                    <p class="text-xs text-orange-700">(1 Pen + 1 Animal Bead + 2 Standard Beads)</p>
+                <!-- Beadable Pen Station[cite: 2] -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-orange-500">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-600 italic">BEADABLE PEN STATION</h3>
+                    <div class="bg-orange-50 p-6 rounded-xl text-center mb-6">
+                        <h4 class="text-xl font-black text-orange-800 mb-2 underline">SPECIAL DEAL</h4>
+                        <p class="text-3xl font-black text-orange-600">$6.00 EACH | 2 FOR $10.00</p>
+                        <p class="text-sm mt-2 text-orange-700">(Includes 1 Pen, 1 Animal Bead, & 2 Standard Beads)[cite: 2]</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- NEW CONTACT SECTION -->
+    <section id="contact" class="py-20 container mx-auto px-6">
+        <div class="max-w-4xl mx-auto bg-gray-900 text-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+            <!-- Contact Info -->
+            <div class="p-10 md:w-1/2 bg-gray-800">
+                <h2 class="text-3xl font-bold mb-6 gold-text">Get In Touch</h2>
+                <p class="mb-8 opacity-80 text-lg">Ready to start your project or need an instant 3D quote? Contact us today!</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-gold text-gray-900 p-3 rounded-full"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-sm opacity-50 uppercase font-bold tracking-tighter">Email Us</p>
+                            <a href="mailto:bunnyandquill@gmail.com" class="text-xl font-medium hover:gold-text">bunnyandquill@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-gold text-gray-900 p-3 rounded-full"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="text-sm opacity-50 uppercase font-bold tracking-tighter">Location</p>
+                            <p class="text-xl font-medium">Pensacola, Florida (Local Pickup Available)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-12 pt-8 border-t border-gray-700">
+                    <p class="text-sm opacity-50 mb-4 uppercase">Follow Our Daily Work</p>
+                    <div class="flex space-x-6 text-3xl">
+                        <a href="https://www.facebook.com/AllansTableOnWheels" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="https://bunny-and-quill.square.site" target="_blank" class="hover:gold-text transition"><i class="fas fa-shopping-bag"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Inquiry Link/Form Box -->
+            <div class="p-10 md:w-1/2 flex flex-col justify-center text-center bg-gray-900 border-l border-gray-800">
+                <h3 class="text-2xl font-bold mb-4">Request a Quote</h3>
+                <p class="mb-8 opacity-70">For 3D Printing: Please attach your .STL or .3MF file to your email.</p>
+                <a href="mailto:bunnyandquill@gmail.com?subject=Inquiry from Website" class="inline-block bg-gold text-gray-900 px-10 py-4 rounded-full font-black text-xl hover:scale-105 transition shadow-lg uppercase tracking-widest">
+                    Email Now
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-white py-12 text-center">
-        <p class="text-xl font-bold mb-2">Bunny and Quill LLC</p>
-        <p class="opacity-70">Pensacola, Florida | Handmade with ❤️</p>
-        <div class="mt-8 flex justify-center space-x-6">
-            <a href="https://bunny-and-quill.square.site" target="_blank" class="hover:gold-text">Stationery Shop</a>
-            <a href="https://allanstableonwheels.square.site" target="_blank" class="hover:gold-text">Catering Site</a>
-            <a href="https://www.facebook.com/AllansTableOnWheels" target="_blank" class="hover:gold-text">Facebook</a>
-        </div>
+    <footer class="py-12 text-center border-t">
+        <p class="text-gray-400">&copy; 2026 Bunny and Quill LLC. Proudly serving Pensacola, FL.</p>
     </footer>
 
 </body>
