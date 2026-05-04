@@ -10,6 +10,8 @@
         .gold-text { color: #C5A059; }
         .border-gold { border-color: #C5A059; }
         .bg-gold { background-color: #C5A059; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0.75rem; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -18,7 +20,7 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="logo.jpg" alt="Bunny and Quill Logo" class="h-20 w-20 rounded-full shadow-sm">
+                <img src="logo.jpg.png" alt="Bunny and Quill Logo" class="h-16 w-16 rounded-full shadow-sm">
                 <div class="text-2xl font-bold tracking-tighter">BUNNY AND QUILL <span class="text-gray-400 font-light">LLC</span></div>
             </div>
             <div class="hidden md:flex space-x-8 font-medium text-lg">
@@ -29,98 +31,91 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="bg-white py-16 border-b">
-        <div class="container mx-auto px-6 text-center">
-            <img src="logo.jpg" alt="Bunny and Quill" class="mx-auto h-64 w-64 mb-8 shadow-2xl border-4 border-gold rounded-full">
-            <h1 class="text-5xl font-extrabold mb-6">Professional Multi-Service Excellence</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Based in Pensacola, Florida, Bunny and Quill LLC provides expert management consulting, 3D printing, and digital solutions for our local community.
-            </p>
+    <!-- New Split-Screen Hero Section -->
+    <header class="bg-white py-12 border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                
+                <!-- Left: 3D Printing Video -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4 gold-text"><i class="fas fa-video mr-2"></i>3D Printing in Action</h2>
+                    <div class="video-container shadow-2xl">
+                        <!-- 您可以將下方的 src 換成您的影片連結或上傳的影片檔名 -->
+                        <video controls autoplay muted loop poster="logo.jpg.png">
+                            <source src="3d-print-timelapse.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Right: Portfolio/Sample Gallery -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4 gold-text"><i class="fas fa-images mr-2"></i>Our Portfolio</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
+                            <img src="sample1.jpg" alt="Sample 1" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                        </div>
+                        <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
+                            <img src="sample2.jpg" alt="Sample 2" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                        </div>
+                        <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
+                            <img src="sample3.jpg" alt="Sample 3" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                        </div>
+                        <div class="h-40 bg-gray-200 rounded-lg overflow-hidden shadow-md">
+                            <img src="sample4.jpg" alt="Sample 4" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+                        </div>
+                    </div>
+                    <p class="mt-6 text-xl text-gray-600 italic">Professional Multi-Service Excellence in Pensacola, FL.</p>
+                </div>
+
+            </div>
         </div>
     </header>
 
-    <!-- Services & Pricing Section -->
-    <section id="services" class="py-20 container mx-auto px-6">
+    <!-- Pricing Section (Content from flyers) -->
+    <section id="pricing" class="py-20 container mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-12">Service Pricing</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             
-            <!-- Custom 3D Printing Pricing -->
-            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 hover:border-gold transition-all">
-                <h3 class="text-3xl font-bold mb-6 gold-text"><i class="fas fa-cube mr-3"></i>3D Printing Services</h3>
-                <div class="space-y-4 mb-8">
+            <!-- 3D Printing Pricing[cite: 1] -->
+            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100">
+                <h3 class="text-3xl font-bold mb-6 gold-text">Custom 3D Printing</h3>
+                <div class="space-y-4 mb-6">
                     <div class="flex justify-between border-b pb-2"><span>Initial Setup & Calibration</span><span class="font-bold">$10.00</span></div>
                     <div class="flex justify-between border-b pb-2"><span>Material (PLA / PETG)</span><span class="font-bold">$0.05/g</span></div>
                     <div class="flex justify-between border-b pb-2"><span>Machine Print Time</span><span class="font-bold">$0.75/hr</span></div>
                 </div>
-                <div class="bg-gray-50 p-4 rounded-lg mb-6">
-                    <h4 class="font-bold mb-2">Bulk Savings:</h4>
-                    <ul class="text-sm space-y-1">
-                        <li>• 5+ Prints: <span class="font-bold">10% OFF</span></li>
-                        <li>• 10+ Prints: <span class="font-bold">20% OFF</span></li>
-                        <li>• Business: <span class="font-bold">Custom Quote</span></li>
-                    </ul>
+                <div class="bg-gray-50 p-4 rounded-lg text-sm mb-4">
+                    <p><strong>Bulk Savings:</strong> 5+ Prints (10% OFF) | 10+ Prints (20% OFF)</p>
                 </div>
-                <div class="text-sm text-gray-500 italic mb-6">How to get a quote: Send us your .STL/.3MF file with preferred dimensions & color!</div>
-                <p class="text-center font-semibold text-blue-700">Quality Guaranteed | Local Pickup in Pensacola, FL</p>
+                <p class="text-xs text-gray-500 italic">Get a Quote: Send us your .STL or .3MF file![cite: 1]</p>
             </div>
 
-            <!-- Beadable Pen Station -->
-            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 hover:border-gold transition-all">
-                <h3 class="text-3xl font-bold mb-6 gold-text"><i class="fas fa-pen-fancy mr-3"></i>Beadable Pen Station</h3>
-                <div class="space-y-6 mb-8">
-                    <div>
-                        <h4 class="font-bold text-gray-700 mb-2">Step 1: Pick a Pen</h4>
-                        <div class="flex justify-between text-sm"><span>Solid Color Body</span><span>$1.00</span></div>
-                        <div class="flex justify-between text-sm font-medium"><span>Sparkly / Gradient / Metallic</span><span>$2.00</span></div>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-700 mb-2">Step 2: Pick Beads</h4>
-                        <div class="flex justify-between text-sm"><span>Standard Beads</span><span>$1.00 / ea</span></div>
-                        <div class="flex justify-between text-sm font-medium text-orange-600"><span>Animal / Silicone Beads</span><span>$3.00 / ea</span></div>
-                    </div>
+            <!-- Beadable Pen Station[cite: 2] -->
+            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100">
+                <h3 class="text-3xl font-bold mb-6 gold-text">DIY Beadable Pens</h3>
+                <div class="space-y-4 mb-6">
+                    <div class="flex justify-between border-b pb-2"><span>Standard Pen Body</span><span class="font-bold">$1.00</span></div>
+                    <div class="flex justify-between border-b pb-2"><span>Animal / Silicone Beads</span><span class="font-bold">$3.00/ea</span></div>
                 </div>
-                <div class="bg-orange-50 border-2 border-orange-200 p-6 rounded-xl text-center mb-6">
-                    <h4 class="font-bold text-orange-800 mb-2">SPECIAL DEAL</h4>
-                    <p class="text-sm mb-2 text-orange-700">(1 Pen + 1 Animal or Silicone Beads + 2 Standard Beads)</p>
-                    <div class="text-2xl font-black text-orange-600">1 FOR $6.00 | 2 FOR $10.00</div>
+                <div class="bg-orange-50 border border-orange-200 p-4 rounded-lg text-center">
+                    <h4 class="font-bold text-orange-800">SPECIAL DEAL[cite: 2]</h4>
+                    <div class="text-xl font-black text-orange-600">1 FOR $6.00 | 2 FOR $10.00</div>
+                    <p class="text-xs text-orange-700">(1 Pen + 1 Animal Bead + 2 Standard Beads)</p>
                 </div>
-                <a href="https://bunny-and-quill.square.site" target="_blank" class="block text-center bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition font-bold">
-                    Shop Online Boutique <i class="fas fa-shopping-cart ml-2"></i>
-                </a>
-            </div>
-
-            <!-- Catering & Delivery -->
-            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 flex flex-col justify-between hover:border-gold transition-all">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4 gold-text">Catering & Delivery</h3>
-                    <p class="text-gray-600 mb-4">High-quality catering and reliable local logistics through <strong>Allan's Table On Wheels</strong>.</p>
-                    <a href="https://www.facebook.com/AllansTableOnWheels" target="_blank" class="text-blue-600 hover:underline mb-6 block"><i class="fab fa-facebook mr-2"></i>Follow us on Facebook</a>
-                </div>
-                <a href="https://allanstableonwheels.square.site" target="_blank" class="text-center bg-orange-600 text-white py-4 rounded hover:bg-orange-700 transition font-bold">
-                    Order Catering <i class="fas fa-utensils ml-2"></i>
-                </a>
-            </div>
-
-            <!-- Business Consulting -->
-            <div class="p-10 bg-white rounded-xl shadow-md border border-gray-100 hover:border-gold transition-all">
-                <h3 class="text-2xl font-bold mb-4 gold-text">Business Solutions</h3>
-                <p class="text-gray-600">Expert management consulting, custom e-commerce setup, and SEO-driven digital marketing promotion.</p>
-                <p class="mt-6 font-bold text-gray-400 uppercase tracking-widest">Inquire for Custom Quote</p>
             </div>
 
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-6 text-center">
-            <img src="logo.jpg" alt="Bunny and Quill Logo" class="mx-auto h-24 w-24 mb-6 rounded-full opacity-90">
-            <h2 class="text-3xl font-bold mb-4">Bunny and Quill LLC</h2>
-            <p class="text-xl opacity-70">Pensacola, Florida</p>
-            <p class="mt-4">Handmade with ❤️ in Pensacola, FL</p>
-            <div class="mt-12 pt-8 border-t border-gray-800 text-sm opacity-50">
-                &copy; 2026 Bunny and Quill LLC. All Rights Reserved.
-            </div>
+    <footer id="contact" class="bg-gray-900 text-white py-12 text-center">
+        <p class="text-xl font-bold mb-2">Bunny and Quill LLC</p>
+        <p class="opacity-70">Pensacola, Florida | Handmade with ❤️</p>
+        <div class="mt-8 flex justify-center space-x-6">
+            <a href="https://bunny-and-quill.square.site" target="_blank" class="hover:gold-text">Stationery Shop</a>
+            <a href="https://allanstableonwheels.square.site" target="_blank" class="hover:gold-text">Catering Site</a>
+            <a href="https://www.facebook.com/AllansTableOnWheels" target="_blank" class="hover:gold-text">Facebook</a>
         </div>
     </footer>
 
