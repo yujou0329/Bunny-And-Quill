@@ -19,7 +19,7 @@
             line-height: 1.6;
         }
 
-        /* 一頁式網頁主體容器 */
+        /* 網頁主體容器 */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -49,6 +49,7 @@
             font-weight: 700;
             font-size: 14px;
             letter-spacing: 0.5px;
+            color: #222;
         }
 
         .logo-avatar {
@@ -69,6 +70,7 @@
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.5px;
+            color: #555;
         }
 
         .nav-links a:hover {
@@ -77,18 +79,19 @@
 
         .btn-order-now {
             background-color: #fce181;
+            color: #524317;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 11px;
             font-weight: 700;
         }
 
-        /* 2. 主視覺看板 Hero Banner - 已修正為讀取本機 hero-bg.jpg */
+        /* 2. 主視覺看板 Hero Banner - 加上深色漸層基底，確保圖片沒出來前文字也不會隱形 */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('hero-bg.jpg') center/cover;
+            background: linear-gradient(rgba(26, 54, 74, 0.6), rgba(26, 54, 74, 0.7)), url('hero-bg.jpg') center/cover #2c5270;
             color: #fff;
             text-align: center;
-            padding: 70px 20px;
+            padding: 80px 20px;
         }
 
         .hero h1 {
@@ -97,6 +100,8 @@
             letter-spacing: 1px;
             margin-bottom: 15px;
             line-height: 1.3;
+            color: #ffffff !important;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
 
         .hero p {
@@ -106,7 +111,8 @@
             max-width: 600px;
             margin: 0 auto 25px auto;
             line-height: 1.5;
-            color: #e1f0fa;
+            color: #e1f0fa !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.4);
         }
 
         .btn-quote {
@@ -177,7 +183,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
-        /* 方案圖片佔位區塊（可依需求替換為本機圖檔，如 url('package-a.jpg')） */
+        /* 方案圖片佔位區塊 */
         .package-img-placeholder {
             width: 100%;
             height: 180px;
@@ -190,7 +196,7 @@
             font-size: 12px;
             font-weight: 600;
         }
-        .package-img-placeholder::before { content: "🎨"; font-size: 36px; margin-bottom: 5px; }
+        .package-img-placeholder::before { content: "🎨"; font-size: 38px; margin-bottom: 5px; }
         .bg-package-b { background: linear-gradient(45deg, #fdfcfb 0%, #e2d1c3 100%); }
         .bg-package-b::before { content: "🎁"; }
 
@@ -234,6 +240,7 @@
         .price-info {
             font-size: 11px;
             font-weight: 700;
+            color: #333;
         }
 
         .btn-action {
@@ -266,4 +273,43 @@
 
         .step-icon {
             font-size: 28px;
-            margin-bottom:
+            margin-bottom: 5px;
+        }
+
+        .step p {
+            font-size: 11px;
+            font-weight: 700;
+            color: #444;
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: #aaa;
+            padding: 0 10px;
+        }
+
+        /* 主題款式展示網格 */
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 25px;
+        }
+
+        .theme-card {
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+        }
+
+        .theme-img-placeholder {
+            width: 100%;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+        .img-paws { background: linear-gradient
