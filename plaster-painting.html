@@ -25,7 +25,7 @@
             margin: 0 auto;
         }
 
-        /* 🎯 頂部品牌標語 Slogan */
+        /* 最頂部品牌標語 Slogan */
         .slogan-top {
             background-color: #ffffff;
             padding: 30px 0;
@@ -66,14 +66,34 @@
             padding: 15px 0;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4a4a4a;
+        /* Logo 與文字並列區塊 - 確保絕不跑位 */
+        .logo-group {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
             text-decoration: none;
+            color: #4a4a4a;
+        }
+
+        .logo-img {
+            height: 56px;
+            width: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffb7b2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: -0.05em;
+        }
+
+        .logo-suff {
+            color: #ffb7b2;
+            font-weight: 300;
+            margin-left: 5px;
         }
 
         .nav-links {
@@ -94,6 +114,26 @@
             color: #ffb7b2;
         }
 
+        /* VISIT US 按鈕樣式 */
+        .btn-visit {
+            background-color: #ec4899;
+            color: #ffffff !important;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .btn-visit:hover {
+            background-color: #db2777;
+            transform: translateY(-1px);
+        }
+
         .btn-cta {
             background-color: #ffd166;
             color: #333;
@@ -109,7 +149,7 @@
             transform: scale(1.05);
         }
 
-        /* 首頁主視覺 Hero Section */
+        /* 主視覺區 Hero Section */
         .hero {
             background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('plaster-group.jpg') no-repeat center center/cover;
             padding: 100px 0;
@@ -179,7 +219,7 @@
             font-size: 20px;
         }
 
-        /* 派對方案 Packages Section */
+        /* 套餐方案 Packages Section */
         .packages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -245,7 +285,7 @@
             color: #2b2b2b;
         }
 
-        /* 訂購流程 How It Works */
+        /* 流程 How It Works */
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -267,7 +307,7 @@
             margin: 0 auto 20px auto;
         }
 
-        /* 常見問答與表單 FAQ & Contact */
+        /* FAQ 與聯絡表單 */
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -313,7 +353,6 @@
             background-color: #ffc233;
         }
 
-        /* 網頁底部 Footer */
         footer {
             background-color: #333;
             color: #fff;
@@ -323,7 +362,7 @@
             font-size: 14px;
         }
 
-        /* 手機板響應式優化 */
+        /* 響應式排版修正 */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -347,15 +386,17 @@
 
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">🐰 Bunny &amp; Quill LLC</a>
+            <a href="index.html" class="logo-group">
+                <img src="logo.jpg" alt="Logo" class="logo-img">
+                <div class="logo-text">BUNNY &amp; QUILL<span class="logo-suff">LLC</span></div>
+            </a>
             
             <ul class="nav-links">
                 <li><a href="index.html#3d-printing">3D Printing</a></li>
-                <li><a href="#why-us" style="color: #4a4a4a; border-bottom: 2px solid #ffb7b2; padding-bottom: 2px;">Plaster Painting</a></li>
+                <li><a href="#why-us" style="color: #a855f7;">Plaster Painting</a></li>
                 <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn-visit">VISIT US 🐾</a></li>
             </ul>
-            <a href="#contact" class="btn-cta">BOOK NOW</a>
         </div>
     </header>
 
