@@ -3,127 +3,613 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bunny & Quill LLC | Custom Plaster Painting Party Kits</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bunny & Quill | Custom Plaster Painting Party Kits</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
+        /* 全域基礎樣式設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #ffffff;
+            color: #333333;
             line-height: 1.6;
-            font-family: 'Quicksand', sans-serif;
         }
-        .cute-title {
-            font-family: 'Fredoka One', cursive;
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-        .gold-text {
+
+        /* 🎯 1. 完美復刻第一張截圖：頂部品牌標語 Slogan */
+        .slogan-top {
+            background-color: #ffffff;
+            padding: 25px 0 15px 0;
+            text-align: center;
+        }
+
+        .slogan-top h1 {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
             color: #C5A059;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
         }
+
+        /* 標語左右兩側的橘黃色星星 */
+        .slogan-top h1 span {
+            color: #f59e0b;
+        }
+
+        /* 標語下方的淡金色短橫線 */
         .slogan-line {
             width: 90px;
             height: 3px;
             background-color: #C5A059;
             margin: 12px auto 0 auto;
             border-radius: 2px;
-            opacity: 0.5;
+            opacity: 0.4;
+        }
+
+        /* 導覽列 Header */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        /* 點擊 Logo 圖片或文字均能完美返回首頁 index.html */
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #2d3748;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffb7b2;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .logo-suff {
+            color: #ff69b4;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 700;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ec4899;
+        }
+
+        /* 🎯 2. 完美復刻第二張截圖：Plaster Painting 左側帶一顆小星星樣式 */
+        .active-plaster {
+            color: #a855f7 !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .active-plaster span {
+            color: #f59e0b;
+        }
+
+        /* 🎯 3. 完美復刻第二張截圖：亮粉紅色 VISIT US 圓角大按鈕（右側帶雙狗爪圖標） */
+        .btn-visit-pink {
+            background-color: #f43f5e;
+            color: #ffffff !important;
+            padding: 10px 26px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px -1px rgba(244, 63, 94, 0.2);
+            transition: background-color 0.2s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-visit-pink:hover {
+            background-color: #e11d48;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section 主視覺大圖看板 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('plaster-group.jpg') no-repeat center center/cover;
+            padding: 120px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 35px auto;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            opacity: 0.95;
+        }
+
+        .btn-hero-cta {
+            display: inline-block;
+            background-color: #7dd3fc;
+            color: #0369a1;
+            padding: 12px 35px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: transform 0.2s;
+        }
+
+        .btn-hero-cta:hover {
+            transform: scale(1.03);
+        }
+
+        /* 區塊通用間距 */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            color: #111111;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* WHY WE ARE DIFFERENT 核心優勢 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid #f1f5f9;
+        }
+
+        .feature-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h4 {
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a202c;
+            text-transform: uppercase;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* POPULAR PARTY PACKAGES 方案區塊 */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .package-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-img {
+            height: 220px;
+            background-color: #f1f5f9;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .package-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .package-content h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #1a202c;
+        }
+
+        .package-content ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .package-content ul li {
+            margin-bottom: 10px;
+            padding-left: 18px;
+            position: relative;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .package-content ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2d3748;
+            font-weight: bold;
+        }
+
+        .package-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .price-text {
+            font-size: 15px;
+            font-weight: 700;
+            color: #111111;
+        }
+
+        .btn-pkg-action {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        /* EASY ORDER PROCESS 流程區塊 */
+        .steps-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 850px;
+            margin: 0 auto 60px auto;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .step-item {
+            width: 160px;
+        }
+
+        .step-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .step-item h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .step-arrow {
+            font-size: 24px;
+            color: #cbd5e1;
+        }
+
+        /* 款式照片牆展示 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+
+        .gallery-img {
+            height: 130px;
+            background-color: #f1f5f9;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-name {
+            padding: 10px 5px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #4a5568;
+            text-transform: uppercase;
+            background-color: #f8fafc;
+        }
+
+        /* FAQ 問答集區塊 */
+        .faq-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .faq-row {
+            background: #ffffff;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-q {
+            font-weight: 700;
+            font-size: 14px;
+            color: #2d3748;
+        }
+
+        .faq-icon-arrow {
+            font-size: 12px;
+            color: #a0aec0;
+        }
+
+        /* CONTACT US 表單區塊 */
+        .contact-box {
+            max-width: 550px;
+            margin: 0 auto;
+            background-color: #e0f2fe;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid #bae6fd;
+        }
+
+        .contact-box h4 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: #0369a1;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #0369a1;
+            margin-bottom: 4px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bae6fd;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: #ffffff;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: 2px solid #38bdf8;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #fde047;
+            color: #713f12;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #facc15;
+        }
+
+        /* 頁尾 */
+        footer {
+            background-color: #ffffff;
+            color: #718096;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 13px;
+            border-top: 1px solid #edf2f7;
+            margin-top: 60px;
+            font-weight: 600;
+        }
+
+        /* 手機板響應式優化 RWD */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .steps-grid {
+                flex-direction: column;
+            }
+            .step-arrow {
+                transform: rotate(90deg);
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <div class="bg-white py-6 text-center border-b border-gray-100">
-        <h1 class="text-2xl md:text-4xl font-black uppercase tracking-[0.15em] gold-text cute-title flex items-center justify-center gap-2">
-            <span class="text-amber-400">✨</span> MAKE YOUR DREAM COME TRUE <span class="text-amber-400">✨</span>
-        </h1>
+    <div class="slogan-top">
+        <h1><span>✨</span> MAKE YOUR DREAM COME TRUE <span>✨</span></h1>
         <div class="slogan-line"></div>
     </div>
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-pink-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition text-gray-800 no-underline">
-                <img src="螢幕擷取畫面 2026-05-17 142113.png" alt="Bunny & Quill LLC Logo" class="h-10 object-contain">
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.jpg" alt="Logo" class="logo-img">
+                <div class="logo-text">BUNNY &amp; QUILL<span class="logo-suff">LLC</span></div>
             </a>
             
-            <div class="hidden md:flex space-x-8 font-bold text-base items-center">
-                <a href="index.html#3d-printing" class="text-gray-600 hover:text-pink-500 transition no-underline">3D Printing</a>
-                <a href="#hero" class="text-purple-500 font-black no-underline flex items-center gap-1">
-                    <span class="text-amber-400">✨</span> Plaster Painting
-                </a>
-                <a href="index.html#pricing" class="text-gray-600 hover:text-pink-500 transition no-underline">Pricing</a>
-                <a href="#market-section" class="bg-pink-500 text-white px-6 py-2.5 rounded-full hover:bg-pink-600 transition shadow-md font-bold tracking-wider uppercase text-xs no-underline flex items-center gap-1.5">
-                    VISIT US <i class="fas fa-paw text-[10px]"></i>
-                </a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#3d-printing">3D Printing</a></li>
+                <li><a href="#why-us" class="active-plaster"><span>✨</span> Plaster Painting</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="#contact" class="btn-visit-pink">VISIT US <i class="fas fa-paw"></i><i class="fas fa-paw" style="margin-left:-2px;"></i></a></li>
+            </ul>
         </div>
-    </nav>
+    </header>
 
-    <section id="hero" class="relative bg-cover bg-center py-20 text-center border-b border-gray-100" style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('Gemini_Generated_Image_8s442t8s442t8s44.png');">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-black text-gray-800 uppercase tracking-wide cute-title mb-4 leading-tight">
-                SPARK THEIR CREATIVITY! NEW <br>CUSTOM PLASTER PAINTING <br>PARTY KITS 🐾🎨
-            </h2>
-            <p class="text-gray-600 font-medium text-base md:text-lg max-w-2xl mx-auto mb-8 uppercase tracking-wide">
-                PERFECT PARTY ACTIVITY + ONE-OF-A-KIND PERSONALIZED NAME FAVORS (GOODIE BAGS). STRESS-FREE PLANNING FOR MOMS!
-            </p>
-            <a href="#market-section" class="bg-sky-400 text-sky-950 px-8 py-3 rounded-md hover:bg-sky-500 transition shadow-md font-bold uppercase tracking-wider text-sm cute-title">
-                [GET A QUOTE / ORDER NOW]
-            </a>
+    <section class="hero">
+        <div class="container">
+            <h2>SPARK THEIR CREATIVITY! NEW <br>CUSTOM PLASTER PAINTING <br>PARTY KITS 🐾🎨</h2>
+            <p>PERFECT PARTY ACTIVITY + ONE-OF-A-KIND PERSONALIZED NAME FAVORS (GOODIE BAGS). STRESS-FREE PLANNING FOR MOMS!</p>
+            <a href="#contact" class="btn-hero-cta">[GET A QUOTE / ORDER NOW]</a>
         </div>
     </section>
 
-    <section class="container mx-auto px-6 py-16">
-        <h3 class="text-2xl font-bold text-center text-gray-800 uppercase tracking-widest mb-12 cute-title">WHY WE ARE DIFFERENT</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div class="text-4xl mb-4">🐾</div>
-                <h4 class="font-bold text-lg mb-2 uppercase cute-title">HANDCRAFTED QUALITY</h4>
-                <p class="text-gray-500 text-sm">100% handmade and carefully demolded. Smooth surfaces, sharp details, and bubble-free for the absolute best coloring experience.</p>
+    <section id="why-us" class="container section-padding">
+        <h3 class="section-title">WHY WE ARE DIFFERENT</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🐾</div>
+                <h4>HANDCRAFTED QUALITY</h4>
+                <p>100% handmade and carefully demolded. Smooth surfaces, sharp details, and bubble-free for the absolute best coloring experience.</p>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div class="text-4xl mb-4">🖌️</div>
-                <h4 class="font-bold text-lg mb-2 uppercase cute-title">ENGAGING ACTIVITY &amp; FAVOR IN ONE</h4>
-                <p class="text-gray-500 text-sm">Keeps the kids happily engaged during the party and doubles as a memorable, practical keepsake they will actually want to take home.</p>
+            <div class="feature-card">
+                <div class="feature-icon">🖌️</div>
+                <h4>ENGAGING ACTIVITY &amp; FAVOR IN ONE</h4>
+                <p>Keeps the kids happily engaged during the party and doubles as a memorable, practical keepsake they will actually want to take home.</p>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div class="text-4xl mb-4">🎁</div>
-                <h4 class="font-bold text-lg mb-2 uppercase cute-title">PERSONALIZED TOUCH FOR EVERY GUEST</h4>
-                <p class="text-gray-500 text-sm">Custom plaster letters to spell out every single guest's name. Watch the children get incredibly excited seeing their own names!</p>
+            <div class="feature-card">
+                <div class="feature-icon">🎁</div>
+                <h4>PERSONALIZED TOUCH FOR EVERY GUEST</h4>
+                <p>Custom plaster letters to spell out every single guest's name. Watch the children get incredibly excited seeing their own names!</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-100/60 py-16 border-y border-gray-200/50">
-        <div class="container mx-auto px-6">
-            <h3 class="text-2xl font-bold text-center text-gray-800 uppercase tracking-widest mb-12 cute-title">POPULAR PARTY PACKAGES</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
-                    <div class="h-64 bg-gray-200 bg-cover bg-center" style="background-image: url('Gemini_Generated_Image_8s442t8s442t8s44.png'); background-position: left center;"></div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="font-bold text-lg mb-3 cute-title">A. FUN PARTY ACTIVITY KIT</h4>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                            <li class="flex items-center gap-2">• CHOOSE 1 LARGE SHAPE (Paw, Dino, or Bee)</li>
-                            <li class="flex items-center gap-2">• 2 MINI THEME SHAPES</li>
-                            <li class="flex items-center gap-2">• WASHABLE PAINTS</li>
+    <section id="packages" class="section-padding" style="background-color: #f8fafc;">
+        <div class="container">
+            <h3 class="section-title">POPULAR PARTY PACKAGES</h3>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-img" style="background-image: url('package-a.jpg');"></div>
+                    <div class="package-content">
+                        <h4>A. FUN PARTY ACTIVITY KIT</h4>
+                        <ul>
+                            <li>CHOOSE 1 LARGE SHAPE (Paw, Dino, or Bee)</li>
+                            <li>2 MINI THEME SHAPES</li>
+                            <li>WASHABLE PAINTS</li>
                         </ul>
-                        <div class="mt-auto flex justify-between items-center pt-4 border-t border-gray-100">
-                            <span class="text-sm font-bold text-gray-800">Starting at $XXX</span>
-                            <a href="#market-section" class="bg-sky-100 text-sky-700 px-5 py-2 rounded font-bold text-xs uppercase tracking-wider hover:bg-sky-200 transition cute-title">[DETAILS]</a>
+                        <div class="package-footer">
+                            <span class="price-text">Starting at $XXX</span>
+                            <a href="#contact" class="btn-pkg-action" style="background-color: #e0f2fe; color: #0369a1;">[DETAILS]</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
-                    <div class="h-64 bg-gray-200 bg-cover bg-center" style="background-image: url('Gemini_Generated_Image_8s442t8s442t8s44.png'); background-position: right center;"></div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h4 class="font-bold text-lg mb-3 cute-title">B. CUSTOM NAME GOODIE BAG FAVORS</h4>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                            <li class="flex items-center gap-2">• CUSTOM NAME LETTERS</li>
-                            <li class="flex items-center gap-2">• THEME ACCESSORY</li>
-                            <li class="flex items-center gap-2">• RIBBON PACKAGING</li>
+                <div class="package-card">
+                    <div class="package-img" style="background-image: url('package-b.jpg');"></div>
+                    <div class="package-content">
+                        <h4>B. CUSTOM NAME GOODIE BAG FAVORS</h4>
+                        <ul>
+                            <li>CUSTOM NAME LETTERS</li>
+                            <li>THEME ACCESSORY</li>
+                            <li>RIBBON PACKAGING</li>
                         </ul>
-                        <div class="mt-auto flex justify-between items-center pt-4 border-t border-gray-100">
-                            <span class="text-sm font-bold text-gray-800">Starting at $XXX</span>
-                            <a href="#market-section" class="bg-amber-100 text-amber-700 px-5 py-2 rounded font-bold text-xs uppercase tracking-wider hover:bg-amber-200 transition cute-title">[CUSTOMIZE]</a>
+                        <div class="package-footer">
+                            <span class="price-text">Starting at $XXX</span>
+                            <a href="#contact" class="btn-pkg-action" style="background-color: #fef08a; color: #713f12;">[CUSTOMIZE]</a>
                         </div>
                     </div>
                 </div>
@@ -131,136 +617,92 @@
         </div>
     </section>
 
-    <section class="container mx-auto px-6 py-16">
-        <h3 class="text-2xl font-bold text-center text-gray-800 uppercase tracking-widest mb-12 cute-title">EASY ORDER PROCESS</h3>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 max-w-3xl mx-auto mb-16">
-            <div class="text-center w-40">
-                <div class="text-4xl mb-3">📋</div>
-                <h4 class="font-bold text-sm text-gray-800">1. Choose Package</h4>
+    <section id="flow" class="container section-padding">
+        <h3 class="section-title">EASY ORDER PROCESS</h3>
+        <div class="steps-grid">
+            <div class="step-item">
+                <div class="step-icon">📋</div>
+                <h5>1. Choose Package</h5>
             </div>
-            <div class="text-xl text-gray-400 hidden md:block">➔</div>
-            <div class="text-center w-40">
-                <div class="text-4xl mb-3">✍️</div>
-                <h4 class="font-bold text-sm text-gray-800">2. Provide Custom List</h4>
+            <div class="step-arrow">➔</div>
+            <div class="step-item">
+                <div class="step-icon">✍️</div>
+                <h5>2. Provide Custom List</h5>
             </div>
-            <div class="text-xl text-gray-400 hidden md:block">➔</div>
-            <div class="text-center w-40">
-                <div class="text-4xl mb-3">🚚</div>
-                <h4 class="font-bold text-sm text-gray-800">3. Ready for Party!</h4>
+            <div class="step-arrow">➔</div>
+            <div class="step-item">
+                <div class="step-icon">🚚</div>
+                <h5>3. Ready for Party!</h5>
             </div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm text-center">
-                <div class="h-32 bg-gray-200 bg-cover bg-center" style="background-image: url('Gemini_Generated_Image_8s442t8s442t8s44.png'); background-position: 25% 80%;"></div>
-                <div class="py-2.5 font-bold text-xs uppercase text-gray-700 bg-sky-50">PAWS 🐾</div>
+        <div class="gallery-grid">
+            <div class="bg-white gallery-card">
+                <div class="gallery-img" style="background-image: url('style-paw.jpg');"></div>
+                <div class="gallery-name">PAWS 🐾</div>
             </div>
-            <div class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm text-center">
-                <div class="h-32 bg-gray-200 bg-cover bg-center" style="background-image: url('Gemini_Generated_Image_8s442t8s442t8s44.png'); background-position: 50% 80%;"></div>
-                <div class="py-2.5 font-bold text-xs uppercase text-gray-700 bg-sky-50">BUGS &amp; BUTTERFLIES 🐝🦋</div>
+            <div class="bg-white gallery-card">
+                <div class="gallery-img" style="background-image: url('style-bug.jpg');"></div>
+                <div class="gallery-name">BUGS &amp; BUTTERFLIES 🐝🦋</div>
             </div>
-            <div class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm text-center">
-                <div class="h-32 bg-gray-200 bg-cover bg-center" style="background-image: url('Gemini_Generated_Image_8s442t8s442t8s44.png'); background-position: 75% 80%;"></div>
-                <div class="py-2.5 font-bold text-xs uppercase text-gray-700 bg-sky-50">ALPHABET 🔤</div>
+            <div class="bg-white gallery-card">
+                <div class="gallery-img" style="background-image: url('style-alpha.jpg');"></div>
+                <div class="gallery-name">ALPHABET 🔤</div>
             </div>
-            <div class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm text-center">
-                <div class="h-32 bg-gray-200 bg-cover bg-center" style="background-image: url('Gemini_Generated_Image_8s442t8s442t8s44.png'); background-position: 100% 80%;"></div>
-                <div class="py-2.5 font-bold text-xs uppercase text-gray-700 bg-sky-50">DINOS &amp; BONES 🦖</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-100/60 py-16 border-t border-gray-200/50">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h3 class="text-2xl font-bold text-center text-gray-800 uppercase tracking-widest mb-12 cute-title">FREQUENTLY ASKED QUESTIONS</h3>
-            <div class="space-y-4 max-w-2xl mx-auto">
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    <h4 class="font-bold text-sm text-gray-800 flex justify-between items-center">What are questions from content? <i class="fas fa-chevron-down text-xs text-gray-400"></i></h4>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    <h4 class="font-bold text-sm text-gray-800 flex justify-between items-center">What can you exid a evaction? <i class="fas fa-chevron-down text-xs text-gray-400"></i></h4>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    <h4 class="font-bold text-sm text-gray-800 flex justify-between items-center">How roona your woole questions? <i class="fas fa-chevron-down text-xs text-gray-400"></i></h4>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    <h4 class="font-bold text-sm text-gray-800 flex justify-between items-center">What is the mere questions? <i class="fas fa-chevron-down text-xs text-gray-400"></i></h4>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    <h4 class="font-bold text-sm text-gray-800 flex justify-between items-center">What is a nay local content? <i class="fas fa-chevron-down text-xs text-gray-400"></i></h4>
-                </div>
+            <div class="bg-white gallery-card">
+                <div class="gallery-img" style="background-image: url('style-dino.jpg');"></div>
+                <div class="gallery-name">DINOS &amp; BONES 🦖</div>
             </div>
         </div>
     </section>
 
-    <section id="market-section" class="py-16 bg-white flex justify-center px-6">
-        <div class="w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-            <div class="bg-[#1e2530] text-white p-10 md:w-1/2 flex flex-col justify-between relative">
-                <div>
-                    <h3 class="text-[#c5a059] text-xl font-bold tracking-wider mb-8 uppercase">FIND US AT THE MARKET</h3>
-                    
-                    <div class="flex items-start space-x-4 mb-6">
-                        <div class="bg-[#c5a059] h-10 w-10 rounded-full flex items-center justify-center text-white shrink-0 shadow">
-                            <i class="fas fa-store text-sm"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold tracking-widest block uppercase">WEEKLY SATURDAY MARKET</span>
-                            <h4 class="text-xl font-black tracking-wide">PALAFOX MARKET</h4>
-                            <p class="text-gray-400 text-sm">Downtown Pensacola, FL</p>
-                            <div class="inline-block border border-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 mt-2">
-                                EVERY SATURDAY: 9:00 AM - 2:00 PM
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-4 mb-6">
-                        <div class="bg-[#c5a059] h-10 w-10 rounded-full flex items-center justify-center text-white shrink-0 shadow">
-                            <i class="fas fa-user-tie text-sm"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold tracking-widest block uppercase">PROJECT MANAGER: ALLAN WU</span>
-                            <a href="tel:850-417-2314" class="text-2xl font-black tracking-wide text-white no-underline hover:text-amber-400 transition">850-417-2314</a>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-[#c5a059] h-10 w-10 rounded-full flex items-center justify-center text-white shrink-0 shadow">
-                            <i class="fas fa-envelope text-sm"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-gray-400 font-bold tracking-widest block uppercase">GENERAL INQUIRY</span>
-                            <a href="mailto:bunnyandquill@gmail.com" class="text-base font-bold text-white no-underline hover:text-amber-400 transition break-all">bunnyandquill@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex space-x-4 mt-8 pt-6 border-t border-gray-700/50">
-                    <a href="#" class="text-white text-lg hover:text-amber-400 transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white text-lg hover:text-amber-400 transition"><i class="fas fa-shopping-bag"></i></a>
-                </div>
+    <section class="section-padding" style="background-color: #f8fafc;">
+        <div class="container faq-container">
+            <h3 class="section-title">FREQUENTLY ASKED QUESTIONS</h3>
+            <div class="faq-row">
+                <span class="faq-q">What are questions from content?</span>
+                <i class="fas fa-chevron-down faq-icon-arrow"></i>
             </div>
-
-            <div class="bg-[#111622] text-white p-10 md:w-1/2 flex flex-col justify-center text-center">
-                <h3 class="text-xl font-bold tracking-wide italic mb-3">Custom Quote or Pre-Order</h3>
-                <p class="text-gray-400 text-sm max-w-xs mx-auto mb-8 leading-relaxed">
-                    Need a specific 3D print or a large batch of beadable pens for an event? Contact <strong class="text-white">**Allan Wu**</strong> to place your order and pick it up this Saturday between <strong class="text-white">**9 AM and 2 PM**</strong>!
-                </p>
-                
-                <div class="space-y-4 max-w-xs mx-auto w-full">
-                    <a href="tel:850-417-2314" class="block w-full bg-white text-gray-900 font-bold py-3.5 rounded-full hover:bg-gray-100 transition shadow-md no-underline text-sm tracking-wider">
-                        Call Now
-                    </a>
-                    <a href="mailto:bunnyandquill@gmail.com?subject=[Custom Order Pre-Order Kit Inquiry]" class="block w-full bg-[#c5a059] text-gray-950 font-bold py-3.5 rounded-full hover:bg-[#b08e4f] transition shadow-md no-underline text-sm tracking-wider">
-                        Email Inquiry
-                    </a>
-                </div>
+            <div class="faq-row">
+                <span class="faq-q">What can you exid a evaction?</span>
+                <i class="fas fa-chevron-down faq-icon-arrow"></i>
+            </div>
+            <div class="faq-row">
+                <span class="faq-q">How roona your woole questions?</span>
+                <i class="fas fa-chevron-down faq-icon-arrow"></i>
+            </div>
+            <div class="faq-row">
+                <span class="faq-q">What is the mere questions?</span>
+                <i class="fas fa-chevron-down faq-icon-arrow"></i>
+            </div>
+            <div class="faq-row">
+                <span class="faq-q">What is a nay local content?</span>
+                <i class="fas fa-chevron-down faq-icon-arrow"></i>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-gray-500 font-bold uppercase tracking-wider">
-        <div class="container mx-auto px-6">
-            © 2026 BUNNY AND QUILL LLC | Pensacola, FL | Palafox Market Local Pick-up
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="contact-box">
+                <h4>CONTACT US</h4>
+                <form action="mailto:bunnyandquill@gmail.com?subject=[Plaster Party Order Inquiry] Custom Kits Request" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label>Form *</label>
+                        <input type="email" placeholder="Email" name="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" name="Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 BUNNY AND QUILL LLC | Pensacola, FL | Palafox Market Local Pick-up</p>
         </div>
     </footer>
 
