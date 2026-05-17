@@ -6,7 +6,6 @@
     <title>Bunny and Quill LLC - Custom Plaster Painting Party Kits</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* 全域樣式設定 */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -20,7 +19,6 @@
             line-height: 1.6;
         }
 
-        /* 網頁主體容器，還原海報/一頁式網頁的置中寬度 */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -33,7 +31,7 @@
             color: inherit;
         }
 
-        /* 1. 導覽列 Navbar */
+        /* 1. Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -52,15 +50,10 @@
             letter-spacing: 0.5px;
         }
 
-        .logo-icon {
-            width: 35px;
-            height: 35px;
-            background: #fce181; 
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -81,14 +74,9 @@
             border-radius: 20px;
             font-size: 11px;
             font-weight: 700;
-            transition: background 0.2s;
         }
 
-        .btn-order-now:hover {
-            background-color: #fbd658;
-        }
-
-        /* 2. 主視覺看板 Hero Banner */
+        /* 2. Hero */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1200') center/cover;
             color: #fff;
@@ -110,7 +98,6 @@
             letter-spacing: 0.5px;
             max-width: 600px;
             margin: 0 auto 25px auto;
-            line-height: 1.5;
         }
 
         .btn-quote {
@@ -122,14 +109,8 @@
             font-weight: 700;
             border: 2px solid #fff;
             display: inline-block;
-            transition: transform 0.2s;
         }
 
-        .btn-quote:hover {
-            transform: scale(1.03);
-        }
-
-        /* 區塊通用標題 */
         .section-title {
             text-align: center;
             font-size: 18px;
@@ -139,7 +120,7 @@
             text-transform: uppercase;
         }
 
-        /* 3. 特色區塊 Why We Are Different */
+        /* 3. Why We Are Different */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -153,7 +134,6 @@
             border-radius: 8px;
             padding: 20px 10px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
         .feature-icon {
@@ -164,11 +144,10 @@
         .feature-card h3 {
             font-size: 11px;
             font-weight: 700;
-            line-height: 1.3;
             text-transform: uppercase;
         }
 
-        /* 4. 套餐方案 Popular Party Packages */
+        /* 4. Packages */
         .packages-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -185,9 +164,9 @@
 
         .package-img {
             width: 100%;
-            height: 160px;
-            background-color: #eee;
+            height: 180px;
             object-fit: cover;
+            display: block;
         }
 
         .package-content {
@@ -240,4 +219,71 @@
         .btn-blue { background-color: #b3dbf1; color: #2c5270; }
         .btn-yellow { background-color: #fce181; color: #524317; }
 
-        /* 5. 訂購流程 Easy Order Process */
+        /* 5. Process & Themes */
+        .process-container {
+            background-color: #ffffff;
+            padding: 10px 25px;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .step { flex: 1; }
+        .step-icon { font-size: 28px; margin-bottom: 5px; }
+        .step p { font-size: 11px; font-weight: 700; }
+        .arrow { font-size: 20px; color: #888; padding: 0 10px; }
+
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 25px;
+        }
+
+        .theme-card {
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+        }
+
+        .theme-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .theme-label {
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 8px 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .bg-paws { background-color: #6fa8dc; }
+        .bg-bugs { background-color: #76a5af; }
+        .bg-alpha { background-color: #6d9eeb; }
+        .bg-dinos { background-color: #93c47d; }
+
+        /* 6. FAQ & Contact */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 25px;
+            padding: 0 25px 40px 25px;
+        }
+
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
