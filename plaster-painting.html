@@ -6,40 +6,503 @@
     <title>Bunny and Quill LLC - Custom Plaster Painting Party Kits</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
-        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; background-color: #ffffff; box-shadow: 0 0 20px rgba(0,0,0,0.08); }
-        a { text-decoration: none; color: inherit; }
+        /* 全域樣式設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 一頁式海報版面容器 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 1. 導覽列 Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-icon {
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: #e2b74c;
+        }
+
+        .btn-order-now {
+            background-color: #fce181;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        /* 2. 主視覺看板 Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://i.imgur.com/vHqgQ36.jpg') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            line-height: 1.5;
+        }
+
+        .btn-quote {
+            background-color: #b3dbf1;
+            color: #2c5270;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 2px solid #fff;
+            display: inline-block;
+        }
+
+        /* 區塊通用標題 */
+        .section-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin: 35px 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        /* 3. 特色區塊 Why We Are Different */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 0 25px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+
+        /* 4. 套餐方案 Popular Party Packages */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 0 25px;
+        }
+
+        .package-card {
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .package-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .package-content {
+            padding: 15px;
+        }
+
+        .package-content h4 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .package-details {
+            list-style: none;
+            font-size: 11px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .package-details li {
+            margin-bottom: 4px;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .package-details li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+        }
+
+        .package-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-info {
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .btn-action {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .btn-blue { background-color: #b3dbf1; color: #2c5270; }
+        .btn-yellow { background-color: #fce181; color: #524317; }
+
+        /* 5. 訂購流程 Easy Order Process */
+        .process-container {
+            background-color: #ffffff;
+            padding: 10px 25px;
+        }
         
-        /* 1. Navbar */
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; background-color: #fff; border-bottom: 1px solid #eee; }
-        .logo-area { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; letter-spacing: 0.5px; }
-        .logo-icon { font-size: 24px; }
-        .nav-links { display: flex; gap: 15px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
-        .nav-links a:hover { color: #e2b74c; }
-        .btn-order-now { background-color: #fce181; padding: 8px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; }
-        
-        /* 2. Hero */
-        .hero { background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1200') center/cover; color: #fff; text-align: center; padding: 60px 20px; }
-        .hero h1 { font-size: 26px; font-weight: 800; letter-spacing: 1px; margin-bottom: 15px; line-height: 1.3; }
-        .hero p { font-size: 12px; font-weight: 600; letter-spacing: 0.5px; max-width: 600px; margin: 0 auto 25px auto; }
-        .btn-quote { background-color: #b3dbf1; color: #2c5270; padding: 10px 24px; border-radius: 6px; font-size: 13px; font-weight: 700; border: 2px solid #fff; display: inline-block; }
-        
-        /* Sections */
-        .section-title { text-align: center; font-size: 18px; font-weight: 800; letter-spacing: 1px; margin: 35px 0 20px 0; text-transform: uppercase; }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 0 25px; }
-        .feature-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 20px 10px; text-align: center; }
-        .feature-icon { font-size: 32px; margin-bottom: 10px; }
-        .feature-card h3 { font-size: 11px; font-weight: 700; text-transform: uppercase; }
-        
-        /* Packages */
-        .packages-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 25px; }
-        .package-card { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; background: #fff; }
-        .package-img { width: 100%; height: 180px; object-fit: cover; display: block; }
-        .package-content { padding: 15px; }
-        .package-content h4 { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
-        .package-details { list-style: none; font-size: 11px; color: #555; margin-bottom: 15px; }
-        .package-details li { margin-bottom: 4px; position: relative; padding-left: 12px; }
-        .package-details li::before { content: "•"; position: absolute; left: 0; color: #333; }
-        .package-footer { display: flex; justify-content: space-between; align-items: center; }
-        .price-info { font-size: 11px; font-weight:
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .step {
+            flex: 1;
+        }
+
+        .step-icon {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .step p {
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: #888;
+            padding: 0 10px;
+        }
+
+        /* 主題款式網格 Theme Grid */
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 25px;
+        }
+
+        .theme-card {
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+        }
+
+        .theme-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .theme-label {
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 8px 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .bg-paws { background-color: #6fa8dc; }
+        .bg-bugs { background-color: #76a5af; }
+        .bg-alpha { background-color: #6d9eeb; }
+        .bg-dinos { background-color: #93c47d; }
+
+        /* 6. FAQ 與聯絡表單雙欄區塊 */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 25px;
+            padding: 0 25px 40px 25px;
+        }
+
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 12px 0;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+        }
+
+        .faq-question::after {
+            content: '∨';
+            font-size: 10px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: 11px;
+            color: #666;
+        }
+
+        /* Contact Form 聯絡表單 */
+        .contact-box {
+            background-color: #bce2f7;
+            border-radius: 8px;
+            padding: 20px;
+            align-self: start;
+        }
+
+        .contact-box h3 {
+            font-size: 14px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px;
+            font-size: 11px;
+            outline: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #fce181;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* 7. 頁尾 */
+        .footer {
+            background-color: #d1ecf1;
+            text-align: center;
+            padding: 15px;
+            font-size: 10px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        @media (max-width: 600px) {
+            .features-grid, .packages-grid, .theme-grid, .bottom-section {
+                grid-template-columns: 1fr;
+            }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header class="navbar">
+        <div class="logo-area">
+            <span class="logo-icon">🐰</span>
+            BUNNY AND QUILL LLC
+        </div>
+        <nav class="nav-links">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PACKAGES</a>
+            <a href="#">FAQ</a>
+            <a href="#">SHOP ALL</a>
+            <a href="#">CONTACT</a>
+        </nav>
+        <a href="#" class="btn-order-now">ORDER NOW</a>
+    </header>
+
+    <section class="hero">
+        <h1>SPARK THEIR CREATIVITY! NEW<br>CUSTOM PLASTER PAINTING<br>PARTY KITS 🐾🎨</h1>
+        <p>PERFECT PARTY ACTIVITY + ONE-OF-A-KIND PERSONALIZED NAME FAVORS (GOODIE BAGS). STRESS-FREE PLANNING FOR MOMS!</p>
+        <a href="#" class="btn-quote">[GET A QUOTE / ORDER NOW]</a>
+    </section>
+
+    <section>
+        <h2 class="section-title">Why We Are Different</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛠️</div>
+                <h3>Handcrafted<br>Quality</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖌️</div>
+                <h3>Engaging Activity<br>& Favor In One</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎁</div>
+                <h3>Personalized Touch<br>For Every Guest</h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Popular Party Packages</h2>
+        <div class="packages-grid">
+            <div class="package-card">
+                <img src="https://i.imgur.com/B9BwX8q.jpg" alt="Party Kit" class="package-img">
+                <div class="package-content">
+                    <h4>A. FUN PARTY ACTIVITY KIT</h4>
+                    <ul class="package-details">
+                        <li>CHOOSE 1 LARGE SHAPE</li>
+                        <li>2 MINI THEME SHAPES</li>
+                        <li>WASHABLE PAINTS</li>
+                    </ul>
+                    <div class="package-footer">
+                        <span class="price-info">Starting at $XXX</span>
+                        <a href="#" class="btn-action btn-blue">[DETAILS]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="package-card">
+                <img src="https://i.imgur.com/w9N40p8.jpg" alt="Goodie Bags" class="package-img">
+                <div class="package-content">
+                    <h4>B. CUSTOM NAME GOODIE BAG FAVORS</h4>
+                    <ul class="package-details">
+                        <li>CUSTOM NAME LETTERS</li>
+                        <li>THEME ACCESSORY</li>
+                        <li>RIBBON PACKAGING</li>
+                    </ul>
+                    <div class="package-footer">
+                        <span class="price-info">Starting at $XXX</span>
+                        <a href="#" class="btn-action btn-yellow">[CUSTOMIZE]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Easy Order Process</h2>
+        <div class="process-container">
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">📋</div>
+                    <p>1. Choose Package</p>
+                </div>
+                <div class="arrow">➔</div>
+                <div class="step">
+                    <div class="step-icon">🏷️</div>
+                    <p>2. Provide Custom List</p>
+                </div>
+                <div class="arrow">➔</div>
+                <div class="step">
+                    <div class="step-icon">🚚</div>
+                    <p>3. Ready for Party!</p
