@@ -25,6 +25,31 @@
             margin: 0 auto;
         }
 
+        /* 🎯 頂部品牌標語 Slogan */
+        .slogan-top {
+            background-color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .slogan-top h1 {
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #C5A059;
+        }
+
+        .slogan-line {
+            width: 90px;
+            height: 4px;
+            background-color: #ffb7b2;
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+            opacity: 0.7;
+        }
+
         /* 導覽列 Navigation */
         header {
             background-color: #ffffff;
@@ -48,18 +73,20 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
             gap: 25px;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #555;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.3s;
         }
 
@@ -84,7 +111,7 @@
 
         /* 首頁主視覺 Hero Section */
         .hero {
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1200') no-repeat center center/cover;
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('plaster-group.jpg') no-repeat center center/cover;
             padding: 100px 0;
             text-align: center;
         }
@@ -313,13 +340,19 @@
 </head>
 <body>
 
+    <div class="slogan-top">
+        <h1>✨ MAKE YOUR DREAM COME TRUE ✨</h1>
+        <div class="slogan-line"></div>
+    </div>
+
     <header>
         <div class="container nav-container">
-            <div class="logo">🐰 Bunny & Quill LLC</div>
+            <a href="index.html" class="logo">🐰 Bunny &amp; Quill LLC</a>
+            
             <ul class="nav-links">
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="index.html#3d-printing">3D Printing</a></li>
+                <li><a href="#why-us" style="color: #4a4a4a; border-bottom: 2px solid #ffb7b2; padding-bottom: 2px;">Plaster Painting</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="btn-cta">BOOK NOW</a>
@@ -433,11 +466,11 @@
             </div>
             <div class="contact-form">
                 <h3 style="margin-bottom: 30px; font-size: 24px;">Contact Us / Get a Quote</h3>
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Party Date & Estimated Guest Count">
-                    <textarea placeholder="Tell us about your custom request (Themes, Names, Preferred Shapes...)" rows="5" required></textarea>
+                <form action="mailto:bunnyandquill@gmail.com?subject=[Plaster Party Order Inquiry] Custom Kits Request" method="post" enctype="text/plain">
+                    <input type="text" placeholder="Your Name" name="Name" required>
+                    <input type="email" placeholder="Your Email" name="Email" required>
+                    <input type="text" placeholder="Party Date & Estimated Guest Count" name="PartyDetails">
+                    <textarea placeholder="Tell us about your custom request (Themes, Names, Preferred Shapes...)" name="Message" rows="5" required></textarea>
                     <button type="submit">Submit Inquiry</button>
                 </form>
             </div>
