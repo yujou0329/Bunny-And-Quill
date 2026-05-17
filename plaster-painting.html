@@ -1,41 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bunny and Quill LLC | Custom Plaster Painting Party Kits</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Bunny and Quill LLC - Custom Plaster Painting Party Kits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body { font-family: 'Montserrat', sans-serif; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
+        /* 全域樣式設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl">🐰</span>
-                <span class="font-bold text-xl tracking-wide text-gray-700">BUNNY AND QUILL LLC</span>
-            </div>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-                <a href="#home" class="hover:text-amber-500">HOME</a>
-                <a href="#about" class="hover:text-amber-500">ABOUT</a>
-                <a href="#packages" class="hover:text-amber-500">PACKAGES</a>
-                <a href="#faq" class="hover:text-amber-500">FAQ</a>
-                <a href="#contact" class="hover:text-amber-500">CONTACT</a>
-            </nav>
-            <a href="#contact" class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold px-5 py-2 rounded-full text-sm shadow-md transition">ORDER NOW</a>
-        </div>
-    </header>
+        /* 導覽列 Header */
+        header {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        .logo i {
+            font-size: 24px;
+            color: #ffb7b2;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .btn-order-now {
+            background-color: #ffe494;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+        .btn-order-now:hover {
+            background-color: #ffd45b;
+        }
 
-    <section id="home" class="bg-amber-50 py-20 px-4 text-center relative">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-6 tracking-tight">
-                SPARK THEIR CREATIVITY!<br>NEW <span class="text-amber-600">CUSTOM PLASTER PAINTING PARTY KITS</span> 🎨🐾
-            </h1>
-            <p class="text-sm md:text-base text-gray-600 font-bold max-w-2xl mx-auto mb-8 tracking-wide uppercase">
-                PERFECT PARTY ACTIVITY + ONE-OF-A-KIND PERSONALIZED NAME FAVORS (GOODIE BAGS). STRESS-FREE PLANNING FOR MOMS!
-            </p>
-            <a href="#contact" class="bg-sky-400 hover:bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg inline-block transition">
-                [ GET A QUOTE / ORDER NOW ]
+        /* 主視覺區 Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-quote {
+            background-color: #a
