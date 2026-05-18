@@ -61,15 +61,11 @@
       gap:12px;
     }
 
-    .logo-circle{
+    .logo img{
       width:50px;
       height:50px;
-      background:#f0cf62;
       border-radius:50%;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      font-size:24px;
+      object-fit:cover;
     }
 
     .logo h1{
@@ -288,4 +284,561 @@
     .yellow-btn{
       background:#f0cf62;
       padding:14px 26px;
-      border-radius:999px
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    /* PROCESS */
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .process-card{
+      background:white;
+      border-radius:30px;
+      padding:40px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .step{
+      width:60px;
+      height:60px;
+      margin:auto;
+      border-radius:50%;
+      background:#f0cf62;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-weight:800;
+      font-size:24px;
+    }
+
+    .process-icon{
+      margin-top:20px;
+      font-size:56px;
+    }
+
+    .process-card h4{
+      margin-top:20px;
+      font-size:26px;
+    }
+
+    /* THEMES */
+
+    .themes{
+      background:white;
+    }
+
+    .themes-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:30px;
+    }
+
+    .theme-card{
+      overflow:hidden;
+      border-radius:28px;
+      background:#faf8f4;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .theme-card img{
+      height:240px;
+      object-fit:cover;
+    }
+
+    .theme-card h4{
+      padding:24px;
+      text-align:center;
+      font-size:28px;
+    }
+
+    /* FAQ + CONTACT */
+
+    .faq-contact{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+    }
+
+    .faq-item{
+      background:white;
+      border-radius:20px;
+      padding:25px;
+      margin-bottom:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .faq-item summary{
+      cursor:pointer;
+      font-weight:600;
+      font-size:18px;
+    }
+
+    .faq-item p{
+      margin-top:15px;
+      color:#666;
+    }
+
+    .contact-box{
+      background:#cfeeff;
+      padding:50px;
+      border-radius:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .contact-box h3{
+      font-size:40px;
+      margin-bottom:30px;
+    }
+
+    .contact-box input,
+    .contact-box textarea{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:16px;
+      margin-bottom:20px;
+      font-family:inherit;
+      font-size:16px;
+    }
+
+    .contact-box button{
+      width:100%;
+      padding:18px;
+      border:none;
+      border-radius:999px;
+      background:#f0cf62;
+      font-size:18px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:#f0cf62;
+      text-align:center;
+    }
+
+    .cta h3{
+      font-size:52px;
+      font-weight:800;
+    }
+
+    .cta p{
+      margin-top:20px;
+      font-size:20px;
+      color:#555;
+    }
+
+    .cta button{
+      margin-top:35px;
+      background:black;
+      color:white;
+      border:none;
+      padding:18px 40px;
+      border-radius:999px;
+      font-size:18px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:black;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    footer p:last-child{
+      margin-top:10px;
+      color:rgba(255,255,255,0.7);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      nav{
+        display:none;
+      }
+
+      .hero h2{
+        font-size:44px;
+      }
+
+      .faq-contact{
+        grid-template-columns:1fr;
+      }
+
+      .section-title h3{
+        font-size:34px;
+      }
+
+      .cta h3{
+        font-size:38px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+
+      <div class="logo">
+        <img src="logo.jpg" alt="Bunny And Quill Logo">
+
+        <div>
+          <h1>BUNNY AND QUILL LLC</h1>
+          <small>Custom Party Kits & Favors</small>
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#packages">PACKAGES</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+      <a href="#contact" class="order-btn">ORDER NOW</a>
+
+    </div>
+  </header>
+
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="container hero-content">
+
+      <div class="badge">
+        Personalized Party Experiences ✨
+      </div>
+
+      <h2>
+        Spark Their Creativity With <br>Custom Party Kits 🎨
+      </h2>
+
+      <p>
+        Handcrafted plaster painting kits, personalized goodie bag favors,
+        and unforgettable party experiences designed for kids and busy moms.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="primary-btn">GET A QUOTE</a>
+        <a href="#packages" class="secondary-btn">VIEW PACKAGES</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h3>WHY WE ARE DIFFERENT</h3>
+
+        <p>
+          Every kit is handcrafted with care to create meaningful,
+          stress-free, and memorable party experiences.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">🖌️</div>
+          <h4>Handcrafted Quality</h4>
+          <p>Each item is carefully designed and assembled by hand.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎉</div>
+          <h4>Activity + Favor In One</h4>
+          <p>Fun entertainment that doubles as a take-home memory.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎁</div>
+          <h4>Personalized Touch</h4>
+          <p>Custom names and themed details for every guest.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="packages" id="packages">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h3>POPULAR PARTY PACKAGES</h3>
+
+        <p>
+          Choose the perfect setup for your celebration.
+        </p>
+      </div>
+
+      <div class="packages-grid">
+
+        <div class="package-card">
+
+          <img src="plaster-group.jpg" alt="Party Activity Kit">
+
+          <div class="package-content">
+
+            <h4>Fun Party Activity Kit</h4>
+
+            <ul>
+              <li>✨ Choose 1 Large Shape</li>
+              <li>✨ 2 Mini Theme Shapes</li>
+              <li>✨ Washable Paints Included</li>
+            </ul>
+
+            <div class="price-row">
+
+              <div>
+                <small>Starting At</small>
+                <div class="price">$XXX</div>
+              </div>
+
+              <a href="#contact" class="yellow-btn">DETAILS</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="package-card">
+
+          <img src="plaster-group.jpg" alt="Custom Name Favors">
+
+          <div class="package-content">
+
+            <h4>Custom Name Goodie Bag Favors</h4>
+
+            <ul>
+              <li>✨ Custom Name Letters</li>
+              <li>✨ Theme Accessories</li>
+              <li>✨ Ribbon Packaging</li>
+            </ul>
+
+            <div class="price-row">
+
+              <div>
+                <small>Starting At</small>
+                <div class="price">$XXX</div>
+              </div>
+
+              <a href="#contact" class="yellow-btn">CUSTOMIZE</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+        <h3>EASY ORDER PROCESS</h3>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="step">1</div>
+
+          <div class="process-icon">📋</div>
+
+          <h4>Choose Your Package</h4>
+
+          <p>
+            Pick your favorite party setup and theme.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="step">2</div>
+
+          <div class="process-icon">✍️</div>
+
+          <h4>Provide Custom Names</h4>
+
+          <p>
+            Send your guest list and personalization details.
+          </p>
+
+        </div>
+
+        <div class="process-card">
+
+          <div class="step">3</div>
+
+          <div class="process-icon">🚚</div>
+
+          <h4>Ready For Party Day</h4>
+
+          <p>
+            Receive beautifully packed kits ready to enjoy.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="themes">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h3>POPULAR THEMES</h3>
+
+        <p>
+          Custom themes available for birthdays and events.
+        </p>
+      </div>
+
+      <div class="themes-grid">
+
+        <div class="theme-card">
+          <img src="plaster-group.jpg" alt="Paws Theme">
+          <h4>Paws</h4>
+        </div>
+
+        <div class="theme-card">
+          <img src="plaster-group.jpg" alt="Butterflies Theme">
+          <h4>Butterflies</h4>
+        </div>
+
+        <div class="theme-card">
+          <img src="plaster-group.jpg" alt="Alphabet Theme">
+          <h4>Alphabet</h4>
+        </div>
+
+        <div class="theme-card">
+          <img src="plaster-group.jpg" alt="Dinos Theme">
+          <h4>Dinos</h4>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="faq">
+
+    <div class="container faq-contact">
+
+      <div>
+
+        <div class="section-title" style="text-align:left;">
+          <h3>FREQUENTLY ASKED QUESTIONS</h3>
+        </div>
+
+        <details class="faq-item">
+          <summary>What comes inside each party kit?</summary>
+          <p>Each kit includes paints, brushes, plaster pieces, and packaging.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I customize names and themes?</summary>
+          <p>Yes! Every order can be personalized for your event.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you offer local pickup?</summary>
+          <p>Yes, local pickup is available in Pensacola, Florida.</p>
+        </details>
+
+      </div>
+
+      <div class="contact-box" id="contact">
+
+        <h3>CONTACT US</h3>
+
+        <form>
+
+          <input type="text" placeholder="Your Name">
+
+          <input type="email" placeholder="Your Email">
+
+          <textarea rows="6" placeholder="Tell us about your event..."></textarea>
+
+          <button type="submit">SUBMIT INQUIRY</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h3>
+        Ready To Create An Unforgettable Party?
+      </h3>
+
+      <p>
+        Personalized, handcrafted party experiences designed
+        to make your celebration stress-free and magical.
+      </p>
+
+      <button onclick="window.location.href='#contact'">
+        ORDER YOUR PARTY KIT
+      </button>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <p>© 2026 BUNNY AND QUILL LLC</p>
+
+    <p>
+      Pensacola, Florida • Palafox Market Local Pickup
+    </p>
+
+  </footer>
+
+</body>
+</html>
