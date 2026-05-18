@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -41,44 +41,35 @@
     .logo{
       display:flex;
       align-items:center;
-      gap:18px;
-      max-width:760px;
+      gap:14px;
+      max-width:430px;
     }
 
     .logo-img{
-      width:68px;
-      height:68px;
+      width:72px;
+      height:72px;
       object-fit:contain;
       border-radius:50%;
-      background:#fff;
+      background:#ffe175;
       flex-shrink:0;
     }
 
     .logo-text h1{
-      font-size:48px;
+      font-size:28px;
       font-weight:700;
-      line-height:1;
-      letter-spacing:3px;
-      white-space:nowrap;
-      background:linear-gradient(
-        90deg,
-        #ff75a6 0%,
-        #ff8b89 13%,
-        #ffbd5f 27%,
-        #f4d96b 40%,
-        #9fdc9e 52%,
-        #6fd4df 65%,
-        #74b7ff 80%,
-        #a58aff 100%
-      );
+      line-height:1.05;
+      letter-spacing:.5px;
+      background:linear-gradient(90deg,#ff7eb3,#ffb86c,#ffe175,#7ed6ff,#b28dff);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
-      background-clip:text;
-      text-shadow:none;
+      text-shadow:0 2px 6px rgba(0,0,0,.08);
     }
 
     .logo-text p{
-      display:none;
+      margin-top:5px;
+      font-size:16px;
+      color:#777;
+      font-weight:500;
     }
 
     nav{
@@ -415,25 +406,21 @@
       color:rgba(255,255,255,.7);
     }
 
-    @media(max-width:1100px){
-      .logo-text h1{font-size:36px}
+    @media(max-width:1000px){
       nav{display:none}
+      .hero h2{font-size:50px}
+      .faq-contact{grid-template-columns:1fr}
     }
 
-    @media(max-width:700px){
-      .nav{gap:12px}
-      .logo-img{width:52px;height:52px}
-      .logo-text h1{
-        font-size:22px;
-        letter-spacing:1.5px;
-        white-space:normal;
-      }
+    @media(max-width:600px){
+      .logo-img{width:58px;height:58px}
+      .logo-text h1{font-size:20px}
+      .logo-text p{font-size:12px}
       .order-btn{display:none}
       .hero{min-height:640px}
       .hero h2{font-size:38px}
       .hero p{font-size:18px}
       .section-title h3,.cta h3{font-size:34px}
-      .faq-contact{grid-template-columns:1fr}
       .price-row{flex-direction:column;align-items:flex-start}
       .contact-box{padding:30px}
     }
