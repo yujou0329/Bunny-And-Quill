@@ -1,676 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bunny And Quill LLC | Plaster Painting Party Kits</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Fredoka',sans-serif;
-      background:#fffaf3;
-      color:#2a2a2a;
-      line-height:1.6;
-    }
-    a{text-decoration:none;color:inherit}
-    img{width:100%;display:block}
-    .container{width:90%;max-width:1200px;margin:auto}
-
-    header{
-      background:white;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 4px 15px rgba(0,0,0,.08);
-    }
-
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:12px 0;
-      gap:20px;
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      max-width:430px;
-    }
-
-    .logo-img{
-      width:72px;
-      height:72px;
-      object-fit:contain;
-      border-radius:50%;
-      background:#ffe175;
-      flex-shrink:0;
-    }
-
-    .logo-text h1{
-      font-size:28px;
-      font-weight:700;
-      line-height:1.05;
-      letter-spacing:.5px;
-      background:linear-gradient(90deg,#ff7eb3,#ffb86c,#ffe175,#7ed6ff,#b28dff);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      text-shadow:0 2px 6px rgba(0,0,0,.08);
-    }
-
-    .logo-text p{
-      margin-top:5px;
-      font-size:16px;
-      color:#777;
-      font-weight:500;
-    }
-
-    nav{
-      display:flex;
-      gap:22px;
-      font-size:15px;
-      font-weight:600;
-    }
-
-    nav a:hover{color:#d59d1b}
-
-    .order-btn{
-      background:#ffe175;
-      padding:12px 22px;
-      border-radius:999px;
-      font-weight:700;
-      box-shadow:0 5px 15px rgba(0,0,0,.1);
-      white-space:nowrap;
-    }
-
-    .hero{
-      min-height:820px;
-      background-image:
-        linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.38)),
-        url('./hero-bg.jpg');
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-      display:flex;
-      align-items:center;
-    }
-
-    .hero-content{
-      max-width:780px;
-      color:white;
-    }
-
-    .badge{
-      display:inline-block;
-      background:rgba(255,255,255,.18);
-      border:1px solid rgba(255,255,255,.35);
-      padding:10px 20px;
-      border-radius:999px;
-      backdrop-filter:blur(8px);
-      margin-bottom:24px;
-      font-weight:600;
-    }
-
-    .hero h2{
-      font-size:72px;
-      line-height:1.02;
-      font-weight:700;
-      text-shadow:0 4px 15px rgba(0,0,0,.35);
-    }
-
-    .hero p{
-      margin-top:24px;
-      font-size:24px;
-      color:rgba(255,255,255,.95);
-      max-width:720px;
-    }
-
-    .hero-buttons{
-      margin-top:40px;
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-
-    .primary-btn,
-    .secondary-btn{
-      padding:16px 34px;
-      border-radius:999px;
-      font-weight:700;
-      box-shadow:0 8px 20px rgba(0,0,0,.18);
-    }
-
-    .primary-btn{background:#9bddff;color:#111}
-    .secondary-btn{background:white;color:#222}
-
-    section{padding:90px 0}
-
-    .section-title{
-      text-align:center;
-      margin-bottom:56px;
-    }
-
-    .section-title h3{
-      font-size:44px;
-      font-weight:700;
-    }
-
-    .section-title p{
-      margin:14px auto 0;
-      font-size:20px;
-      color:#666;
-      max-width:760px;
-    }
-
-    .features-grid,
-    .process-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
-    }
-
-    .feature-card,
-    .process-card{
-      background:white;
-      padding:42px;
-      border-radius:32px;
-      text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,.07);
-    }
-
-    .feature-icon,
-    .process-icon{
-      font-size:60px;
-      margin-bottom:18px;
-    }
-
-    .feature-card h4,
-    .process-card h4{
-      font-size:28px;
-      margin-bottom:12px;
-    }
-
-    .feature-card p,
-    .process-card p{
-      color:#666;
-      font-size:18px;
-    }
-
-    .packages,
-    .themes{
-      background:white;
-    }
-
-    .packages-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:40px;
-    }
-
-    .package-card{
-      background:#fffaf2;
-      border-radius:34px;
-      overflow:hidden;
-      box-shadow:0 12px 35px rgba(0,0,0,.09);
-    }
-
-    .package-card img{
-      height:330px;
-      object-fit:cover;
-    }
-
-    .package-content{
-      padding:34px;
-    }
-
-    .package-content h4{
-      font-size:32px;
-      margin-bottom:18px;
-    }
-
-    .package-content ul{
-      list-style:none;
-    }
-
-    .package-content li{
-      margin-bottom:10px;
-      color:#555;
-      font-size:18px;
-    }
-
-    .price-row{
-      margin-top:28px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-    }
-
-    .price{
-      font-size:32px;
-      font-weight:700;
-    }
-
-    .yellow-btn{
-      background:#ffe175;
-      padding:14px 24px;
-      border-radius:999px;
-      font-weight:700;
-      white-space:nowrap;
-    }
-
-    .step{
-      width:64px;
-      height:64px;
-      background:#ffe175;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin:0 auto 18px;
-      font-size:26px;
-      font-weight:700;
-    }
-
-    .themes-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:26px;
-    }
-
-    .theme-card{
-      background:#fffaf2;
-      border-radius:28px;
-      overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,.06);
-      text-align:center;
-    }
-
-    .theme-card img{
-      height:230px;
-      object-fit:cover;
-    }
-
-    .theme-card h4{
-      padding:22px;
-      font-size:26px;
-    }
-
-    .faq-contact{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:start;
-    }
-
-    .faq-item{
-      background:white;
-      padding:24px;
-      border-radius:22px;
-      margin-bottom:18px;
-      box-shadow:0 5px 20px rgba(0,0,0,.05);
-    }
-
-    .faq-item summary{
-      cursor:pointer;
-      font-size:19px;
-      font-weight:700;
-    }
-
-    .faq-item p{
-      margin-top:14px;
-      color:#666;
-      font-size:18px;
-    }
-
-    .contact-box{
-      background:#d6f1ff;
-      padding:46px;
-      border-radius:34px;
-      box-shadow:0 10px 30px rgba(0,0,0,.07);
-    }
-
-    .contact-box h3{
-      font-size:40px;
-      margin-bottom:26px;
-    }
-
-    .contact-box input,
-    .contact-box textarea{
-      width:100%;
-      border:none;
-      border-radius:18px;
-      padding:16px;
-      margin-bottom:18px;
-      font-family:inherit;
-      font-size:17px;
-    }
-
-    .contact-box button{
-      width:100%;
-      border:none;
-      border-radius:999px;
-      background:#ffe175;
-      padding:18px;
-      font-size:18px;
-      font-weight:700;
-      cursor:pointer;
-      font-family:inherit;
-    }
-
-    .cta{
-      background:#ffe175;
-      text-align:center;
-    }
-
-    .cta h3{
-      font-size:52px;
-      line-height:1.15;
-    }
-
-    .cta p{
-      margin:20px auto 0;
-      font-size:21px;
-      color:#555;
-      max-width:760px;
-    }
-
-    .cta a{
-      display:inline-block;
-      margin-top:35px;
-      background:#222;
-      color:white;
-      padding:18px 42px;
-      border-radius:999px;
-      font-size:19px;
-      font-weight:700;
-    }
-
-    footer{
-      background:#222;
-      color:white;
-      text-align:center;
-      padding:40px 20px;
-      font-size:17px;
-    }
-
-    footer p:last-child{
-      margin-top:10px;
-      color:rgba(255,255,255,.7);
-    }
-
-    @media(max-width:1000px){
-      nav{display:none}
-      .hero h2{font-size:50px}
-      .faq-contact{grid-template-columns:1fr}
-    }
-
-    @media(max-width:600px){
-      .logo-img{width:58px;height:58px}
-      .logo-text h1{font-size:20px}
-      .logo-text p{font-size:12px}
-      .order-btn{display:none}
-      .hero{min-height:640px}
-      .hero h2{font-size:38px}
-      .hero p{font-size:18px}
-      .section-title h3,.cta h3{font-size:34px}
-      .price-row{flex-direction:column;align-items:flex-start}
-      .contact-box{padding:30px}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunny And Quill LLC | Make Your Dream Come True</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Quicksand', sans-serif; }
+        .cute-title { font-family: 'Fredoka One', cursive; }
+        .gold-text { color: #C5A059; }
+        .bg-gold { background-color: #C5A059; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1.5rem; }
+    </style>
 </head>
+<body class="bg-amber-50/40 text-gray-700">
 
-<body>
+    <div class="bg-white py-8 text-center border-b border-pink-50">
+        <h1 class="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] gold-text cute-title flex items-center justify-center gap-4">
+            <span class="text-amber-400">✨</span>
+            MAKE YOUR DREAM COME TRUE
+            <span class="text-amber-400">✨</span>
+        </h1>
+        <div class="w-24 h-1 bg-amber-200 mx-auto mt-4 rounded-full opacity-60"></div>
+    </div>
 
-<header>
-  <div class="container nav">
-    <a href="https://yujou0329.github.io/Bunny-And-Quill/" class="logo">
-      <img src="./logo.jpg" alt="Bunny And Quill Logo" class="logo-img">
-      <div class="logo-text">
-        <h1>BUNNY AND QUILL LLC</h1>
-        <p>Custom Party Kits & Favors</p>
-      </div>
-    </a>
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 rounded-b-3xl border-b border-pink-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-4 hover:opacity-90 transition">
+                <img src="logo.jpg" alt="Logo" class="h-14 w-14 rounded-full shadow-md border-2 border-pink-200 object-cover">
+                <div class="text-2xl font-bold tracking-tight uppercase text-gray-800">
+                    BUNNY &amp; QUILL <span class="text-pink-400 font-light ml-2 text-xl">LLC</span>
+                </div>
+            </a>
 
-    <nav>
-      <a href="#packages">PACKAGES</a>
-      <a href="#process">HOW IT WORKS</a>
-      <a href="#themes">THEMES</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">CONTACT</a>
+            <div class="hidden md:flex space-x-8 font-bold text-lg items-center">
+                <a href="#3d-printing" class="text-gray-600 hover:text-pink-500 transition">3D Printing</a>
+                <a href="plaster-painting.html" class="text-purple-500 hover:text-purple-700 transition font-black">✨ Plaster Painting</a>
+                <a href="#pricing" class="text-gray-600 hover:text-pink-500 transition">Pricing</a>
+                <a href="#contact" class="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition shadow-md font-bold tracking-wider uppercase text-sm">Visit Us 🐾</a>
+            </div>
+        </div>
     </nav>
 
-    <a href="#contact" class="order-btn">ORDER NOW</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="badge">Custom Plaster Painting Party Kits ✨</div>
-      <h2>Spark Their Creativity With A Ready-To-Go Painting Party 🎨</h2>
-      <p>
-        Handmade plaster painting kits for birthdays, playdates,
-        classroom fun, party favors, and creative kids’ celebrations.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#contact" class="primary-btn">GET A QUOTE</a>
-        <a href="#packages" class="secondary-btn">VIEW PACKAGES</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h3>WHY PARENTS LOVE IT</h3>
-      <p>A creative activity, a party favor, and a memorable keepsake all in one.</p>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🖌️</div>
-        <h4>Ready To Paint</h4>
-        <p>Each kit is prepared with plaster shapes and kid-friendly painting supplies.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🎉</div>
-        <h4>Party Activity + Favor</h4>
-        <p>Kids enjoy painting during the party and take home their finished creation.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🎁</div>
-        <h4>Custom Themes</h4>
-        <p>Choose from animals, butterflies, dinos, alphabet letters, seasonal themes, and more.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="packages" id="packages">
-  <div class="container">
-    <div class="section-title">
-      <h3>POPULAR PARTY OPTIONS</h3>
-      <p>Choose the setup that works best for your celebration.</p>
-    </div>
-
-    <div class="packages-grid">
-      <div class="package-card">
-        <img src="./plaster-group.jpg" alt="Plaster painting party kit">
-        <div class="package-content">
-          <h4>Plaster Painting Activity Kit</h4>
-          <ul>
-            <li>✨ Plaster shapes for each child</li>
-            <li>✨ Paints and brushes available</li>
-            <li>✨ Great for birthdays and group activities</li>
-            <li>✨ Custom themes available</li>
-          </ul>
-
-          <div class="price-row">
-            <div>
-              <small>Starting At</small>
-              <div class="price">$XXX</div>
+    <header id="3d-printing" class="bg-white py-12 border-b border-pink-50 rounded-b-[3rem] shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4 text-purple-600 uppercase tracking-wide text-center lg:text-left cute-title">🎬 3D Printing Process</h2>
+                    <div class="video-container shadow-xl rounded-3xl border-4 border-purple-100">
+                        <video controls autoplay muted loop poster="logo.jpg">
+                            <source src="3d-print-timelapse.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4 text-pink-500 uppercase tracking-wide text-center lg:text-left cute-title">✨ Our Portfolio</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-40 bg-gray-100 rounded-2xl overflow-hidden shadow-md border-2 border-pink-100"><img src="sample1.jpg" alt="Sample 1" class="w-full h-full object-cover"></div>
+                        <div class="h-40 bg-gray-100 rounded-2xl overflow-hidden shadow-md border-2 border-pink-100"><img src="sample2.jpg" alt="Sample 2" class="w-full h-full object-cover"></div>
+                        <div class="h-40 bg-gray-100 rounded-2xl overflow-hidden shadow-md border-2 border-pink-100"><img src="sample3.jpg" alt="Sample 3" class="w-full h-full object-cover"></div>
+                        <div class="h-40 bg-gray-100 rounded-2xl overflow-hidden shadow-md border-2 border-pink-100"><img src="sample4.jpg" alt="Sample 4" class="w-full h-full object-cover"></div>
+                    </div>
+                </div>
             </div>
-            <a href="#contact" class="yellow-btn">REQUEST DETAILS</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="package-card">
-        <img src="./plaster-group.jpg" alt="Custom plaster party favors">
-        <div class="package-content">
-          <h4>Custom Goodie Bag Favors</h4>
-          <ul>
-            <li>✨ Personalized name letters</li>
-            <li>✨ Theme accessories</li>
-            <li>✨ Ribbon packaging</li>
-            <li>✨ Perfect take-home party favors</li>
-          </ul>
-
-          <div class="price-row">
-            <div>
-              <small>Starting At</small>
-              <div class="price">$XXX</div>
+            <div class="mt-16 bg-gradient-to-r from-purple-100 to-pink-100 rounded-[2rem] p-8 flex flex-col md:flex-row items-center justify-between border-2 border-purple-200 shadow-md">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <span class="bg-purple-200 text-purple-800 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">New Arrival</span>
+                    <h3 class="text-2xl font-black text-gray-800 mt-2 cute-title">🎨 Plaster Painting & Kids Birthday Party Kits!</h3>
+                    <p class="text-gray-600 mt-1 font-medium">Handcrafted custom name favors & activities for Pensacola birthdays 🐾🐝🦖</p>
+                </div>
+                <div>
+                    <a href="plaster-painting.html" class="bg-purple-500 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-purple-600 transition shadow-md block text-center transform hover:scale-105 duration-150 cute-title">
+                        Explore Plaster Kits ➔
+                    </a>
+                </div>
             </div>
-            <a href="#contact" class="yellow-btn">CUSTOMIZE</a>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section id="process">
-  <div class="container">
-    <div class="section-title">
-      <h3>EASY ORDER PROCESS</h3>
-      <p>Simple, stress-free, and made for busy parents.</p>
-    </div>
+    <section id="pricing" class="py-16 bg-transparent">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-12 uppercase tracking-wide text-purple-600 cute-title">🌈 Market Specials & Rates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-3xl shadow-md border-2 border-amber-200 relative overflow-hidden">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-600 italic cute-title">🤖 3D PRINTING SERVICE</h3>
+                    <ul class="space-y-4 mb-6 text-lg font-medium">
+                        <li class="flex justify-between border-b border-dashed pb-2"><span>Setup Fee</span><span class="font-bold text-gray-900">$10.00</span></li>
+                        <li class="flex justify-between border-b border-dashed pb-2"><span>Material (PLA/PETG)</span><span class="font-bold text-gray-900">$0.05/g</span></li>
+                        <li class="flex justify-between border-b border-dashed pb-2"><span>Machine Time</span><span class="font-bold text-gray-900">$0.75/hr</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-md border-2 border-pink-200 relative overflow-hidden">
+                    <h3 class="text-2xl font-bold mb-6 text-pink-500 italic font-black uppercase cute-title">🖊️ Beadable Pen Station</h3>
+                    <div class="bg-pink-50/50 p-6 rounded-2xl text-center">
+                        <h4 class="text-xl font-black text-pink-700 mb-2 underline cute-title">MARKET SPECIAL</h4>
+                        <p class="text-3xl font-black text-pink-500 cute-title">$6.00 EACH | 2 FOR $10.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="process-grid">
-      <div class="process-card">
-        <div class="step">1</div>
-        <div class="process-icon">📋</div>
-        <h4>Choose Your Theme</h4>
-        <p>Select your favorite shapes, colors, and party style.</p>
-      </div>
+    <section id="contact" class="py-20 container mx-auto px-6">
+        <div class="max-w-5xl mx-auto bg-gradient-to-br from-purple-600 to-indigo-700 text-white rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row border-4 border-white">
+            <div class="p-10 md:w-1/2 flex flex-col justify-center text-center bg-white/5 mx-auto">
+                <h3 class="text-2xl font-bold mb-4 cute-title text-yellow-300">Email us for a Custom Quote!</h3>
+                <div class="space-y-4 max-w-sm mx-auto w-full">
+                    <a href="tel:8504172314" class="block bg-white text-purple-700 py-3.5 rounded-full font-bold text-lg hover:bg-purple-50 transition shadow-md cute-title">📞 Call Allan Now</a>
+                    <a href="mailto:bunnyandquill@gmail.com?subject=Palafox Market Inquiry" class="block bg-yellow-300 text-purple-900 py-3.5 rounded-full font-bold text-lg hover:bg-yellow-400 transition shadow-md cute-title">✉️ Email Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="process-card">
-        <div class="step">2</div>
-        <div class="process-icon">✍️</div>
-        <h4>Send Party Details</h4>
-        <p>Share the date, guest count, names, and any custom requests.</p>
-      </div>
-
-      <div class="process-card">
-        <div class="step">3</div>
-        <div class="process-icon">🎨</div>
-        <h4>Ready For Party Day</h4>
-        <p>Your kits are prepared and ready for pickup or delivery arrangement.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="themes" id="themes">
-  <div class="container">
-    <div class="section-title">
-      <h3>POPULAR THEMES</h3>
-      <p>Mix and match shapes to create the perfect party set.</p>
-    </div>
-
-    <div class="themes-grid">
-      <div class="theme-card">
-        <img src="./plaster-group.jpg" alt="Paws plaster theme">
-        <h4>Paws</h4>
-      </div>
-
-      <div class="theme-card">
-        <img src="./plaster-group.jpg" alt="Butterfly plaster theme">
-        <h4>Butterflies</h4>
-      </div>
-
-      <div class="theme-card">
-        <img src="./plaster-group.jpg" alt="Alphabet plaster theme">
-        <h4>Alphabet</h4>
-      </div>
-
-      <div class="theme-card">
-        <img src="./plaster-group.jpg" alt="Dinosaur plaster theme">
-        <h4>Dinos</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container faq-contact">
-    <div id="faq">
-      <div class="section-title" style="text-align:left; margin-bottom:35px;">
-        <h3>FAQ</h3>
-      </div>
-
-      <details class="faq-item">
-        <summary>What comes inside each party kit?</summary>
-        <p>Each kit can include plaster shapes, paints, brushes, and packaging depending on the option you choose.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>Can I choose a custom theme?</summary>
-        <p>Yes. Theme options may include animals, butterflies, dinosaurs, letters, seasonal shapes, and custom requests.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>How far in advance should I order?</summary>
-        <p>Please order as early as possible, especially for personalized names or larger parties.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>Do you offer local pickup?</summary>
-        <p>Yes. Local pickup is available in Pensacola, Florida.</p>
-      </details>
-    </div>
-
-    <div class="contact-box" id="contact">
-      <h3>CONTACT US</h3>
-
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <input type="text" placeholder="Party Date / Guest Count">
-        <textarea rows="6" placeholder="Tell us about your party theme, quantity, and custom request..."></textarea>
-        <button type="submit">SUBMIT INQUIRY</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container">
-    <h3>Ready To Create A Creative Party Experience?</h3>
-    <p>
-      Handmade plaster painting kits designed to make your celebration fun,
-      personal, and stress-free.
-    </p>
-    <a href="#contact">GET MY PARTY QUOTE</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 BUNNY AND QUILL LLC</p>
-  <p>Pensacola, Florida • Local Pickup Available</p>
-</footer>
+    <footer class="py-12 text-center border-t border-pink-100 bg-white">
+        <p class="text-gray-400 font-bold text-sm">Proudly Serving Pensacola, FL | &copy; 2026 Bunny and Quill LLC</p>
+    </footer>
 
 </body>
 </html>
