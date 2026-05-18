@@ -1,99 +1,379 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bunny and Quill LLC - Custom Plaster Painting Party Kits</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* 全域樣式設定 */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
-            line-height: 1.6;
-        }
-        a {
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 14px;
-        }
+export default function BunnyAndQuillLandingPage() {
+  const packages = [
+    {
+      title: 'Fun Party Activity Kit',
+      bullets: ['Choose 1 Large Shape', '2 Mini Theme Shapes', 'Washable Paints Included'],
+      image:
+        'https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1200&auto=format&fit=crop',
+      button: 'Details',
+    },
+    {
+      title: 'Custom Name Goodie Bag Favors',
+      bullets: ['Custom Name Letters', 'Theme Accessories', 'Ribbon Packaging'],
+      image:
+        'https://images.unsplash.com/photo-1513267048331-5611cad62e41?q=80&w=1200&auto=format&fit=crop',
+      button: 'Customize',
+    },
+  ]
 
-        /* 導覽列 Header */
-        header {
-            background-color: #ffffff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-        .logo i {
-            font-size: 24px;
-            color: #ffb7b2;
-        }
-        nav {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .btn-order-now {
-            background-color: #ffe494;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-weight: 700;
-            transition: background 0.3s;
-        }
-        .btn-order-now:hover {
-            background-color: #ffd45b;
-        }
+  const themes = [
+    {
+      name: 'Paws',
+      image:
+        'https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      name: 'Bugs & Butterflies',
+      image:
+        'https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      name: 'Alphabet',
+      image:
+        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      name: 'Dinos & Bones',
+      image:
+        'https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=1200&auto=format&fit=crop',
+    },
+  ]
 
-        /* 主視覺區 Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .hero p {
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-quote {
-            background-color: #a
+  const faqs = [
+    'What comes inside each party kit?',
+    'How far in advance should I order?',
+    'Can I customize names and themes?',
+    'Do you offer local pickup?',
+    'Can you create custom party themes?',
+  ]
+
+  return (
+    <div className="min-h-screen bg-[#f7f4ef] text-gray-900">
+      {/* Header */}
+      <header className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f6df84] text-2xl">
+              🐰
+            </div>
+            <div>
+              <h1 className="text-lg font-black tracking-wide">BUNNY AND QUILL LLC</h1>
+              <p className="text-xs text-gray-500">Custom Party Kits & Favors</p>
+            </div>
+          </div>
+
+          <nav className="hidden items-center gap-8 font-semibold md:flex">
+            <a href="#home" className="hover:text-[#c28b2c]">HOME</a>
+            <a href="#about" className="hover:text-[#c28b2c]">ABOUT</a>
+            <a href="#packages" className="hover:text-[#c28b2c]">PACKAGES</a>
+            <a href="#faq" className="hover:text-[#c28b2c]">FAQ</a>
+            <a href="#contact" className="hover:text-[#c28b2c]">CONTACT</a>
+          </nav>
+
+          <button className="rounded-full bg-[#f0cf62] px-5 py-3 text-sm font-bold shadow hover:scale-105 transition">
+            ORDER NOW
+          </button>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section
+        id="home"
+        className="relative overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              'url(https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=1800&auto=format&fit=crop)',
+          }}
+        />
+
+        <div className="absolute inset-0 bg-black/45" />
+
+        <div className="relative mx-auto flex min-h-[700px] max-w-7xl items-center px-6 py-24">
+          <div className="max-w-3xl text-white">
+            <div className="mb-6 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm backdrop-blur">
+              Personalized Party Experiences ✨
+            </div>
+
+            <h2 className="text-5xl font-black leading-tight md:text-7xl">
+              Spark Their Creativity With Custom Party Kits 🎨
+            </h2>
+
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/90 md:text-2xl">
+              Handcrafted plaster painting kits, personalized goodie bag favors,
+              and unforgettable party experiences designed for kids and busy moms.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <button className="rounded-full bg-[#8fd6ff] px-8 py-4 text-lg font-black text-gray-900 shadow-xl transition hover:scale-105">
+                GET A QUOTE
+              </button>
+
+              <button className="rounded-full border-2 border-white px-8 py-4 text-lg font-black transition hover:bg-white hover:text-black">
+                VIEW PACKAGES
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="mx-auto max-w-7xl px-6 py-24" id="about">
+        <div className="text-center">
+          <h3 className="text-4xl font-black">WHY WE ARE DIFFERENT</h3>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+            Every kit is handcrafted with care to create meaningful, stress-free,
+            and memorable party experiences.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
+          {[
+            {
+              icon: '🖌️',
+              title: 'Handcrafted Quality',
+              desc: 'Each item is carefully designed and assembled by hand.',
+            },
+            {
+              icon: '🎉',
+              title: 'Activity + Favor In One',
+              desc: 'Fun entertainment that doubles as a take-home memory.',
+            },
+            {
+              icon: '🎁',
+              title: 'Personalized Touch',
+              desc: 'Custom names and themed details for every guest.',
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl bg-white p-10 text-center shadow-lg transition hover:-translate-y-2"
+            >
+              <div className="text-6xl">{item.icon}</div>
+              <h4 className="mt-6 text-2xl font-black">{item.title}</h4>
+              <p className="mt-4 text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Packages */}
+      <section id="packages" className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center">
+            <h3 className="text-4xl font-black">POPULAR PARTY PACKAGES</h3>
+            <p className="mt-4 text-lg text-gray-600">
+              Choose the perfect setup for your celebration.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-10 md:grid-cols-2">
+            {packages.map((pkg) => (
+              <div
+                key={pkg.title}
+                className="overflow-hidden rounded-[32px] bg-[#faf8f4] shadow-xl"
+              >
+                <img
+                  src={pkg.image}
+                  alt={pkg.title}
+                  className="h-72 w-full object-cover"
+                />
+
+                <div className="p-8">
+                  <h4 className="text-3xl font-black">{pkg.title}</h4>
+
+                  <ul className="mt-6 space-y-3 text-lg text-gray-700">
+                    {pkg.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-center gap-3">
+                        <span>✨</span>
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-8 flex items-center justify-between">
+                    <div>
+                      <p className="text-sm text-gray-500">Starting At</p>
+                      <p className="text-3xl font-black">$XXX</p>
+                    </div>
+
+                    <button className="rounded-full bg-[#f0cf62] px-6 py-3 font-black shadow hover:scale-105 transition">
+                      {pkg.button}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="text-center">
+          <h3 className="text-4xl font-black">EASY ORDER PROCESS</h3>
+        </div>
+
+        <div className="mt-16 grid gap-10 md:grid-cols-3">
+          {[
+            {
+              step: '1',
+              icon: '📋',
+              title: 'Choose Your Package',
+              desc: 'Pick your favorite party setup and theme.',
+            },
+            {
+              step: '2',
+              icon: '✍️',
+              title: 'Provide Custom Names',
+              desc: 'Send your guest list and personalization details.',
+            },
+            {
+              step: '3',
+              icon: '🚚',
+              title: 'Ready For Party Day',
+              desc: 'Receive beautifully packed kits ready to enjoy.',
+            },
+          ].map((item) => (
+            <div
+              key={item.step}
+              className="rounded-3xl bg-white p-10 text-center shadow-lg"
+            >
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#f0cf62] text-2xl font-black">
+                {item.step}
+              </div>
+
+              <div className="mt-6 text-5xl">{item.icon}</div>
+
+              <h4 className="mt-6 text-2xl font-black">{item.title}</h4>
+              <p className="mt-4 text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Themes */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center">
+            <h3 className="text-4xl font-black">POPULAR THEMES</h3>
+            <p className="mt-4 text-lg text-gray-600">
+              Custom themes available for birthdays, school events, and celebrations.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {themes.map((theme) => (
+              <div
+                key={theme.name}
+                className="overflow-hidden rounded-[28px] bg-[#faf8f4] shadow-lg transition hover:-translate-y-2"
+              >
+                <img
+                  src={theme.image}
+                  alt={theme.name}
+                  className="h-64 w-full object-cover"
+                />
+
+                <div className="p-6 text-center">
+                  <h4 className="text-2xl font-black">{theme.name}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ + Contact */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div id="faq">
+            <h3 className="text-4xl font-black">FREQUENTLY ASKED QUESTIONS</h3>
+
+            <div className="mt-10 space-y-4">
+              {faqs.map((faq) => (
+                <details
+                  key={faq}
+                  className="rounded-2xl bg-white p-6 shadow"
+                >
+                  <summary className="cursor-pointer text-lg font-bold">
+                    {faq}
+                  </summary>
+
+                  <p className="mt-4 text-gray-600">
+                    We are happy to help with custom requests, local pickup,
+                    timelines, and personalized themes.
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+
+          <div id="contact" className="rounded-[32px] bg-[#cfeeff] p-10 shadow-xl">
+            <h3 className="text-4xl font-black">CONTACT US</h3>
+
+            <form className="mt-10 space-y-6">
+              <div>
+                <label className="mb-2 block text-sm font-bold">Name</label>
+                <input
+                  type="text"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-5 py-4 outline-none focus:ring-2 focus:ring-[#7cc8f3]"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-bold">Email</label>
+                <input
+                  type="email"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-5 py-4 outline-none focus:ring-2 focus:ring-[#7cc8f3]"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-bold">Message</label>
+                <textarea
+                  rows={6}
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-5 py-4 outline-none focus:ring-2 focus:ring-[#7cc8f3]"
+                  placeholder="Tell us about your party..."
+                />
+              </div>
+
+              <button className="w-full rounded-full bg-[#f0cf62] px-6 py-4 text-lg font-black shadow-lg transition hover:scale-[1.02]">
+                SUBMIT INQUIRY
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#f0cf62] py-20">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <h3 className="text-5xl font-black">
+            Ready To Create An Unforgettable Party?
+          </h3>
+
+          <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-700">
+            Personalized, handcrafted party experiences designed to make your
+            celebration stress-free and magical.
+          </p>
+
+          <button className="mt-10 rounded-full bg-black px-10 py-5 text-lg font-black text-white transition hover:scale-105">
+            ORDER YOUR PARTY KIT
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black py-10 text-center text-white">
+        <p className="text-lg font-bold">© 2026 BUNNY AND QUILL LLC</p>
+        <p className="mt-2 text-white/70">
+          Pensacola, Florida • Palafox Market Local Pickup
+        </p>
+      </footer>
+    </div>
+  )
+}
