@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -39,29 +38,26 @@
       margin:auto;
     }
 
-    /* =========================
-       HEADER
-    ========================= */
-
     header{
       background:white;
       position:sticky;
       top:0;
       z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
     }
 
     .nav{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:18px 0;
+      padding:14px 0;
+      gap:24px;
     }
 
     .logo{
       display:flex;
       align-items:center;
-      gap:20px;
+      gap:18px;
       text-decoration:none;
     }
 
@@ -70,10 +66,11 @@
       height:90px;
       object-fit:contain;
       display:block;
+      border-radius:50%;
     }
 
     .logo-text h1{
-      font-size:48px;
+      font-size:40px;
       font-weight:800;
       color:#222;
       line-height:1;
@@ -88,8 +85,9 @@
 
     nav{
       display:flex;
-      gap:28px;
+      gap:24px;
       font-weight:600;
+      font-size:15px;
     }
 
     nav a:hover{
@@ -98,63 +96,55 @@
 
     .order-btn{
       background:#f0cf62;
-      padding:14px 26px;
+      padding:13px 24px;
       border-radius:999px;
       font-weight:700;
-      transition:.3s;
+      white-space:nowrap;
     }
-
-    .order-btn:hover{
-      transform:translateY(-2px);
-    }
-
-    /* =========================
-       HERO
-    ========================= */
 
     .hero{
       position:relative;
       min-height:720px;
       background:
-      linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-      url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=1800&auto=format&fit=crop')
-      center/cover no-repeat;
-
+        linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
+        url('./hero-bg.jpg') center/cover no-repeat;
       display:flex;
       align-items:center;
     }
 
     .hero-content{
-      max-width:700px;
+      max-width:760px;
       color:white;
     }
 
     .badge{
       display:inline-block;
-      background:rgba(255,255,255,.15);
-      border:1px solid rgba(255,255,255,.25);
+      background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.3);
       padding:10px 18px;
       border-radius:999px;
       backdrop-filter:blur(10px);
       margin-bottom:25px;
+      font-weight:600;
     }
 
     .hero h2{
-      font-size:64px;
-      line-height:1.1;
+      font-size:62px;
+      line-height:1.08;
       font-weight:800;
     }
 
     .hero p{
-      margin-top:25px;
+      margin-top:24px;
       font-size:20px;
-      color:rgba(255,255,255,.92);
+      color:rgba(255,255,255,.94);
+      max-width:680px;
     }
 
     .hero-buttons{
       margin-top:40px;
       display:flex;
-      gap:20px;
+      gap:18px;
       flex-wrap:wrap;
     }
 
@@ -163,8 +153,7 @@
       color:#111;
       padding:16px 34px;
       border-radius:999px;
-      font-weight:700;
-      transition:.3s;
+      font-weight:800;
     }
 
     .secondary-btn{
@@ -172,13 +161,7 @@
       color:white;
       padding:16px 34px;
       border-radius:999px;
-      font-weight:700;
-      transition:.3s;
-    }
-
-    .primary-btn:hover,
-    .secondary-btn:hover{
-      transform:translateY(-3px);
+      font-weight:800;
     }
 
     .secondary-btn:hover{
@@ -186,21 +169,17 @@
       color:black;
     }
 
-    /* =========================
-       SECTION TITLE
-    ========================= */
-
     section{
-      padding:100px 0;
+      padding:90px 0;
     }
 
     .section-title{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:56px;
     }
 
     .section-title h3{
-      font-size:44px;
+      font-size:42px;
       font-weight:800;
     }
 
@@ -210,46 +189,38 @@
       color:#666;
     }
 
-    /* =========================
-       FEATURES
-    ========================= */
-
-    .features-grid{
+    .features-grid,
+    .process-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:30px;
     }
 
-    .feature-card{
+    .feature-card,
+    .process-card{
       background:white;
-      padding:45px;
+      padding:42px;
       border-radius:30px;
       text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,.06);
-      transition:.3s;
+      box-shadow:0 10px 30px rgba(0,0,0,.07);
     }
 
-    .feature-card:hover{
-      transform:translateY(-6px);
+    .feature-icon,
+    .process-icon{
+      font-size:58px;
+      margin-bottom:16px;
     }
 
-    .feature-icon{
-      font-size:60px;
+    .feature-card h4,
+    .process-card h4{
+      font-size:26px;
+      margin-bottom:12px;
     }
 
-    .feature-card h4{
-      margin-top:20px;
-      font-size:28px;
-    }
-
-    .feature-card p{
-      margin-top:15px;
+    .feature-card p,
+    .process-card p{
       color:#666;
     }
-
-    /* =========================
-       PACKAGES
-    ========================= */
 
     .packages{
       background:white;
@@ -257,7 +228,7 @@
 
     .packages-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
       gap:40px;
     }
 
@@ -269,17 +240,17 @@
     }
 
     .package-card img{
-      height:280px;
+      height:320px;
       object-fit:cover;
     }
 
     .package-content{
-      padding:35px;
+      padding:34px;
     }
 
     .package-content h4{
-      font-size:32px;
-      margin-bottom:20px;
+      font-size:30px;
+      margin-bottom:18px;
     }
 
     .package-content ul{
@@ -287,8 +258,9 @@
     }
 
     .package-content li{
-      margin-bottom:12px;
+      margin-bottom:10px;
       color:#555;
+      font-weight:500;
     }
 
     .price-row{
@@ -296,36 +268,20 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
+      gap:20px;
     }
 
     .price{
-      font-size:32px;
+      font-size:30px;
       font-weight:800;
     }
 
     .yellow-btn{
       background:#f0cf62;
-      padding:14px 28px;
+      padding:14px 26px;
       border-radius:999px;
-      font-weight:700;
-    }
-
-    /* =========================
-       PROCESS
-    ========================= */
-
-    .process-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
-
-    .process-card{
-      background:white;
-      padding:40px;
-      border-radius:30px;
-      text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,.06);
+      font-weight:800;
+      white-space:nowrap;
     }
 
     .step{
@@ -336,29 +292,10 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      margin:auto;
+      margin:0 auto 20px;
       font-weight:800;
       font-size:24px;
     }
-
-    .process-icon{
-      margin-top:20px;
-      font-size:54px;
-    }
-
-    .process-card h4{
-      margin-top:20px;
-      font-size:28px;
-    }
-
-    .process-card p{
-      margin-top:12px;
-      color:#666;
-    }
-
-    /* =========================
-       THEMES
-    ========================= */
 
     .themes{
       background:white;
@@ -366,50 +303,47 @@
 
     .themes-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:30px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:26px;
     }
 
     .theme-card{
-      overflow:hidden;
-      border-radius:28px;
       background:#faf8f4;
+      border-radius:26px;
+      overflow:hidden;
       box-shadow:0 10px 30px rgba(0,0,0,.06);
+      text-align:center;
     }
 
     .theme-card img{
-      height:240px;
+      height:220px;
       object-fit:cover;
     }
 
     .theme-card h4{
-      padding:24px;
-      text-align:center;
-      font-size:28px;
+      padding:22px;
+      font-size:24px;
     }
-
-    /* =========================
-       FAQ + CONTACT
-    ========================= */
 
     .faq-contact{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:50px;
+      align-items:start;
     }
 
     .faq-item{
       background:white;
       padding:24px;
       border-radius:20px;
-      margin-bottom:20px;
+      margin-bottom:18px;
       box-shadow:0 5px 20px rgba(0,0,0,.05);
     }
 
     .faq-item summary{
       cursor:pointer;
       font-size:18px;
-      font-weight:600;
+      font-weight:700;
     }
 
     .faq-item p{
@@ -419,23 +353,23 @@
 
     .contact-box{
       background:#cfeeff;
-      padding:50px;
+      padding:46px;
       border-radius:32px;
-      box-shadow:0 10px 30px rgba(0,0,0,.06);
+      box-shadow:0 10px 30px rgba(0,0,0,.07);
     }
 
     .contact-box h3{
-      font-size:42px;
-      margin-bottom:30px;
+      font-size:38px;
+      margin-bottom:26px;
     }
 
     .contact-box input,
     .contact-box textarea{
       width:100%;
       border:none;
-      border-radius:18px;
+      border-radius:16px;
       padding:16px;
-      margin-bottom:20px;
+      margin-bottom:18px;
       font-family:inherit;
       font-size:16px;
     }
@@ -447,13 +381,9 @@
       background:#f0cf62;
       padding:18px;
       font-size:18px;
-      font-weight:700;
+      font-weight:800;
       cursor:pointer;
     }
-
-    /* =========================
-       CTA
-    ========================= */
 
     .cta{
       background:#f0cf62;
@@ -461,31 +391,28 @@
     }
 
     .cta h3{
-      font-size:52px;
+      font-size:50px;
       font-weight:800;
+      line-height:1.15;
     }
 
     .cta p{
-      margin-top:20px;
+      margin:20px auto 0;
       font-size:20px;
       color:#555;
+      max-width:760px;
     }
 
-    .cta button{
+    .cta a{
+      display:inline-block;
       margin-top:35px;
       background:black;
       color:white;
-      border:none;
       padding:18px 42px;
       border-radius:999px;
       font-size:18px;
-      font-weight:700;
-      cursor:pointer;
+      font-weight:800;
     }
-
-    /* =========================
-       FOOTER
-    ========================= */
 
     footer{
       background:black;
@@ -499,456 +426,328 @@
       color:rgba(255,255,255,.7);
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media(max-width:900px){
-
+    @media(max-width:1000px){
       nav{
         display:none;
       }
 
       .logo-text h1{
-        font-size:28px;
+        font-size:30px;
+      }
+
+      .logo-text p{
+        font-size:16px;
       }
 
       .hero h2{
-        font-size:42px;
-      }
-
-      .hero p{
-        font-size:18px;
+        font-size:44px;
       }
 
       .faq-contact{
         grid-template-columns:1fr;
       }
-
-      .section-title h3{
-        font-size:34px;
-      }
-
-      .cta h3{
-        font-size:38px;
-      }
-
-      .logo-img{
-        width:70px;
-        height:70px;
-      }
-
     }
 
+    @media(max-width:600px){
+      .logo-img{
+        width:64px;
+        height:64px;
+      }
+
+      .logo-text h1{
+        font-size:22px;
+      }
+
+      .logo-text p{
+        font-size:13px;
+      }
+
+      .order-btn{
+        display:none;
+      }
+
+      .hero{
+        min-height:620px;
+      }
+
+      .hero h2{
+        font-size:36px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+      .section-title h3,
+      .cta h3{
+        font-size:32px;
+      }
+
+      .price-row{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
-
   <header>
-
     <div class="container nav">
-
       <a href="https://yujou0329.github.io/Bunny-And-Quill/" class="logo">
-
-        <img
-          src="./images/logo.png"
-          alt="Bunny And Quill Logo"
-          class="logo-img"
-        >
+        <img src="./logo.jpg" alt="Bunny And Quill Logo" class="logo-img">
 
         <div class="logo-text">
           <h1>BUNNY AND QUILL LLC</h1>
           <p>Custom Party Kits & Favors</p>
         </div>
-
       </a>
 
       <nav>
         <a href="#packages">PACKAGES</a>
+        <a href="#process">HOW IT WORKS</a>
         <a href="#themes">THEMES</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">CONTACT</a>
       </nav>
 
       <a href="#contact" class="order-btn">ORDER NOW</a>
-
     </div>
-
   </header>
 
-  <!-- =========================
-       HERO
-  ========================= -->
-
   <section class="hero">
-
     <div class="container">
-
       <div class="hero-content">
+        <div class="badge">Custom Plaster Painting Party Kits ✨</div>
 
-        <div class="badge">
-          Personalized Party Experiences ✨
-        </div>
-
-        <h2>
-          Spark Their Creativity With Custom Plaster Painting Kits 🎨
-        </h2>
+        <h2>Spark Their Creativity With A Ready-To-Go Painting Party 🎨</h2>
 
         <p>
-          Handcrafted plaster painting kits, personalized goodie bag favors,
-          and unforgettable party experiences designed for kids and busy moms.
+          Handmade plaster painting kits for birthdays, playdates, classroom fun,
+          party favors, and creative kids’ celebrations.
         </p>
 
         <div class="hero-buttons">
           <a href="#contact" class="primary-btn">GET A QUOTE</a>
           <a href="#packages" class="secondary-btn">VIEW PACKAGES</a>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- =========================
-       FEATURES
-  ========================= -->
-
   <section>
-
     <div class="container">
-
       <div class="section-title">
-        <h3>WHY WE ARE DIFFERENT</h3>
-
+        <h3>WHY PARENTS LOVE IT</h3>
         <p>
-          Every kit is handcrafted with care to create meaningful,
-          stress-free, and memorable party experiences.
+          A creative activity, a party favor, and a memorable keepsake all in one.
         </p>
       </div>
 
       <div class="features-grid">
-
         <div class="feature-card">
           <div class="feature-icon">🖌️</div>
-          <h4>Handcrafted Quality</h4>
-          <p>Each item is carefully designed and assembled by hand.</p>
+          <h4>Ready To Paint</h4>
+          <p>Each kit is prepared with plaster shapes and kid-friendly painting supplies.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🎉</div>
-          <h4>Activity + Favor In One</h4>
-          <p>Fun entertainment that doubles as a take-home memory.</p>
+          <h4>Party Activity + Favor</h4>
+          <p>Kids enjoy painting during the party and take home their finished creation.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🎁</div>
-          <h4>Personalized Touch</h4>
-          <p>Custom names and themed details for every guest.</p>
+          <h4>Custom Themes</h4>
+          <p>Choose from animals, butterflies, dinos, alphabet letters, seasonal themes, and more.</p>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- =========================
-       PACKAGES
-  ========================= -->
-
   <section class="packages" id="packages">
-
     <div class="container">
-
       <div class="section-title">
-        <h3>POPULAR PARTY PACKAGES</h3>
-
-        <p>
-          Choose the perfect setup for your celebration.
-        </p>
+        <h3>POPULAR PARTY OPTIONS</h3>
+        <p>Choose the setup that works best for your celebration.</p>
       </div>
 
       <div class="packages-grid">
-
         <div class="package-card">
-
-          <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1200&auto=format&fit=crop">
+          <img src="./plaster-group.jpg" alt="Plaster painting party kit">
 
           <div class="package-content">
-
-            <h4>Fun Party Activity Kit</h4>
+            <h4>Plaster Painting Activity Kit</h4>
 
             <ul>
-              <li>✨ Choose 1 Large Shape</li>
-              <li>✨ 2 Mini Theme Shapes</li>
-              <li>✨ Washable Paints Included</li>
+              <li>✨ Plaster shapes for each child</li>
+              <li>✨ Paints and brushes available</li>
+              <li>✨ Great for birthdays and group activities</li>
+              <li>✨ Custom themes available</li>
             </ul>
 
             <div class="price-row">
-
               <div>
                 <small>Starting At</small>
                 <div class="price">$XXX</div>
               </div>
 
-              <a href="#contact" class="yellow-btn">
-                DETAILS
-              </a>
-
+              <a href="#contact" class="yellow-btn">REQUEST DETAILS</a>
             </div>
-
           </div>
-
         </div>
 
         <div class="package-card">
-
-          <img src="https://images.unsplash.com/photo-1513267048331-5611cad62e41?q=80&w=1200&auto=format&fit=crop">
+          <img src="./plaster-group.jpg" alt="Custom plaster party favors">
 
           <div class="package-content">
-
-            <h4>Custom Name Goodie Bag Favors</h4>
+            <h4>Custom Goodie Bag Favors</h4>
 
             <ul>
-              <li>✨ Custom Name Letters</li>
-              <li>✨ Theme Accessories</li>
-              <li>✨ Ribbon Packaging</li>
+              <li>✨ Personalized name letters</li>
+              <li>✨ Theme accessories</li>
+              <li>✨ Ribbon packaging</li>
+              <li>✨ Perfect take-home party favors</li>
             </ul>
 
             <div class="price-row">
-
               <div>
                 <small>Starting At</small>
                 <div class="price">$XXX</div>
               </div>
 
-              <a href="#contact" class="yellow-btn">
-                CUSTOMIZE
-              </a>
-
+              <a href="#contact" class="yellow-btn">CUSTOMIZE</a>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- =========================
-       PROCESS
-  ========================= -->
-
-  <section>
-
+  <section id="process">
     <div class="container">
-
       <div class="section-title">
         <h3>EASY ORDER PROCESS</h3>
+        <p>Simple, stress-free, and made for busy parents.</p>
       </div>
 
       <div class="process-grid">
-
         <div class="process-card">
-
           <div class="step">1</div>
-
           <div class="process-icon">📋</div>
-
-          <h4>Choose Your Package</h4>
-
-          <p>
-            Pick your favorite party setup and theme.
-          </p>
-
+          <h4>Choose Your Theme</h4>
+          <p>Select your favorite shapes, colors, and party style.</p>
         </div>
 
         <div class="process-card">
-
           <div class="step">2</div>
-
           <div class="process-icon">✍️</div>
-
-          <h4>Provide Custom Names</h4>
-
-          <p>
-            Send your guest list and personalization details.
-          </p>
-
+          <h4>Send Party Details</h4>
+          <p>Share the date, guest count, names, and any custom requests.</p>
         </div>
 
         <div class="process-card">
-
           <div class="step">3</div>
-
-          <div class="process-icon">🚚</div>
-
+          <div class="process-icon">🎨</div>
           <h4>Ready For Party Day</h4>
-
-          <p>
-            Receive beautifully packed kits ready to enjoy.
-          </p>
-
+          <p>Your kits are prepared and ready for pickup or delivery arrangement.</p>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- =========================
-       THEMES
-  ========================= -->
-
   <section class="themes" id="themes">
-
     <div class="container">
-
       <div class="section-title">
         <h3>POPULAR THEMES</h3>
-
-        <p>
-          Custom themes available for birthdays and events.
-        </p>
+        <p>Mix and match shapes to create the perfect party set.</p>
       </div>
 
       <div class="themes-grid">
-
         <div class="theme-card">
-          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop">
+          <img src="./plaster-group.jpg" alt="Paws plaster theme">
           <h4>Paws</h4>
         </div>
 
         <div class="theme-card">
-          <img src="https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?q=80&w=1200&auto=format&fit=crop">
+          <img src="./plaster-group.jpg" alt="Butterfly plaster theme">
           <h4>Butterflies</h4>
         </div>
 
         <div class="theme-card">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+          <img src="./plaster-group.jpg" alt="Alphabet plaster theme">
           <h4>Alphabet</h4>
         </div>
 
         <div class="theme-card">
-          <img src="https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=1200&auto=format&fit=crop">
+          <img src="./plaster-group.jpg" alt="Dinosaur plaster theme">
           <h4>Dinos</h4>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- =========================
-       FAQ + CONTACT
-  ========================= -->
-
   <section>
-
     <div class="container faq-contact">
-
       <div id="faq">
-
-        <div class="section-title" style="text-align:left;">
-          <h3>FREQUENTLY ASKED QUESTIONS</h3>
+        <div class="section-title" style="text-align:left; margin-bottom:35px;">
+          <h3>FAQ</h3>
         </div>
 
         <details class="faq-item">
           <summary>What comes inside each party kit?</summary>
-          <p>
-            Each kit includes paints, brushes, plaster pieces,
-            and packaging.
-          </p>
+          <p>Each kit can include plaster shapes, paints, brushes, and packaging depending on the option you choose.</p>
         </details>
 
         <details class="faq-item">
-          <summary>Can I customize names and themes?</summary>
-          <p>
-            Yes! Every order can be personalized for your event.
-          </p>
+          <summary>Can I choose a custom theme?</summary>
+          <p>Yes. Theme options may include animals, butterflies, dinosaurs, letters, seasonal shapes, and custom requests.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How far in advance should I order?</summary>
+          <p>Please order as early as possible, especially for personalized names or larger parties.</p>
         </details>
 
         <details class="faq-item">
           <summary>Do you offer local pickup?</summary>
-          <p>
-            Yes, local pickup is available in Pensacola, Florida.
-          </p>
+          <p>Yes. Local pickup is available in Pensacola, Florida.</p>
         </details>
-
       </div>
 
       <div class="contact-box" id="contact">
-
         <h3>CONTACT US</h3>
 
         <form>
-
           <input type="text" placeholder="Your Name">
-
           <input type="email" placeholder="Your Email">
+          <input type="text" placeholder="Party Date / Guest Count">
+          <textarea rows="6" placeholder="Tell us about your party theme, quantity, and custom request..."></textarea>
 
-          <textarea rows="6" placeholder="Tell us about your event..."></textarea>
-
-          <button type="submit">
-            SUBMIT INQUIRY
-          </button>
-
+          <button type="submit">SUBMIT INQUIRY</button>
         </form>
-
       </div>
-
     </div>
-
   </section>
-
-  <!-- =========================
-       CTA
-  ========================= -->
 
   <section class="cta">
-
     <div class="container">
-
-      <h3>
-        Ready To Create An Unforgettable Party?
-      </h3>
+      <h3>Ready To Create A Creative Party Experience?</h3>
 
       <p>
-        Personalized, handcrafted party experiences designed
-        to make your celebration stress-free and magical.
+        Handmade plaster painting kits designed to make your celebration fun,
+        personal, and stress-free.
       </p>
 
-      <button>
-        ORDER YOUR PARTY KIT
-      </button>
-
+      <a href="#contact">GET MY PARTY QUOTE</a>
     </div>
-
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
   <footer>
-
     <p>© 2026 BUNNY AND QUILL LLC</p>
-
-    <p>
-      Pensacola, Florida • Palafox Market Local Pickup
-    </p>
-
+    <p>Pensacola, Florida • Local Pickup Available</p>
   </footer>
 
 </body>
